@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 
 username = "jojo"
-api_key = "930565e6e7319047b304d840123e2c52a5444920bfafd9bb35d631a99fa12cd5"
+api_key = "7d5ec7e665579ee7ef1a3a71927f74123d0542960de776089cc89b28b4977804"
 # Create your views here.
 
 def welcome(request):
