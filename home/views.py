@@ -3,7 +3,7 @@ import africastalking
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 
-username = "jojo"
+username = "nesjoselyne@gmail.com"
 api_key = "7d5ec7e665579ee7ef1a3a71927f74123d0542960de776089cc89b28b4977804"
 # Create your views here.
 
