@@ -28,7 +28,7 @@ def ussdapp(request):
         numb = text[:3]
 
         if text == '':
-            response = 'CON Welcome to Ida USSD app \n'
+            response = 'CON welcome to  digital ikigega platform for farmers: \n'
             response += '1. Girls In Code \n'
             response += '2. SDF Program'
             # girls in code session
@@ -45,8 +45,6 @@ def ussdapp(request):
         elif numb == '1*1' and int(len(level))==4 and str(level[3]) in str(level):
             response = 'CON Enter your pincode \n'
         elif text == '1*2':
-
-
             response = 'CON Enter your PINCode \n'
         elif text == '1*3':
             response = 'CON Enter your Address \n'
@@ -65,3 +63,66 @@ def ussdapp(request):
         return HttpResponse(response)
 
     return HttpResponse('Welcome')
+def digitalapp (request):
+    if request.method == 'POST':
+        session_id = request.POST.get('sessionId')
+        service_code = request.POST.get('serviceCode')
+        phone_number = request.POST.get('phoneNumber')
+        text = request.POST.get('text')
+        level = text.split('*')
+        response = ''
+        numb = text[:3]
+        if text == '':
+            response = 'CON welcome to  digital ikigega platform for farmers: \n'
+            response += '1. 1.harvesting services \n'
+            response += '2. fincial services \n'
+            response += '3.other services'
+            # girls in code session
+        elif text == '1':
+            response = 'CON welcome to  digital ikigega platform for farmers '+str(len(level))+'\n'
+            response += '1. current total harvesting data \n'
+            response += '2. monthly current harvesting data \n'
+            response += '3. return'
+
+        elif text == '1*1':
+            response = 'CON Enter farmers code or phone number '+str(len(level))+' \n'
+        elif numb == '1*1' and int(len(level))==3 and str(level[2]) in str(level):
+            response = 'CON you want tocheck on ur : \n'
+            response += '1.total harvesting in  the last 3 months \n'
+            response += '2.total harvesting in  the last 4 months \n'
+            response += '3.total harvesting in  the last 6 months \n'
+        elif numb == '1*1' and int(len(level))==4 and str(level[3]) in str(level):
+            response = 'CON Enter your pincode \n'
+        elif text == '1*2':
+            response = 'CON Enter farmers code \n'
+        elif text == '1*3':
+            response = 'CON Enter your Address \n'
+         
+        elif text == '2':
+            response = 'CON Welcome to the financial services  \n'
+            response += '1. direct loan \n'
+            response += '2. pay loan\n'
+            response += '3. limited loan'
+        elif text == '2*1':
+            response = 'CON Enter farmers code or phone number '+str(len(level))+' \n'
+        elif numb == '2*1' and int(len(level))==3 and str(level[2]) in str(level):
+            response = 'CON you want to get : \n'
+            response += '1.direct loan  of 2 months allowed loan (20000rwf) \n'
+            response += '2.direct loan of 4 months allowed loan (40000rwf) \n'
+            response += '3.dierect loan of 6 months allowed loan (80000rwf) \n'
+            response += '4.dierect loan of 12 months  allowed loan (120000rwf)\n'
+        elif numb == '1*1' and int(len(level))==4 and str(level[3]) in str(level):
+            response = 'CON Enter the money you want: \n'
+        elif text == '1*2':
+            response = 'CON Enter farmers code \n'
+        elif text == '1*3':
+            response = 'CON Enter your Address \n'
+        else:
+            response = 'END Invalid Choice'
+
+
+            
+
+        return HttpResponse(response)
+
+    return HttpResponse('ikigega')
