@@ -7,5 +7,5 @@ urlpatterns=[
     path('',views.welcome, name='popschools'),
     path('about-us',views.about, name='about'),
     path('our-price',views.pricing, name='price'),
-    path('ussdapp/',views.ussdapp, name='ussdapp')
+    path('ussdapp',views.ussdapp, name='ussdapp')
 ] + static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
