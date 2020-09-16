@@ -39,12 +39,14 @@ def ussdapp(request):
             response += '3. Leave'
 
         elif text == '1*1':
-            response = 'CON Enter you Name '+str(len(level))+'\n'
-        elif numb == '1*1'  int(len(level))==3 and str(level[2]) in str(level):
+            response = 'CON Enter you Name '+str(len(level))+' \n'
+        elif numb == '1*1' and int(len(level))==3 and str(level[2]) in str(level):
             response = 'CON Enter your IDnumber \n'
-        elif numb == '1*1' int(len(level))==4 and str(level[3]) in str(level):
+        elif numb == '1*1' and int(len(level))==4 and str(level[3]) in str(level):
             response = 'CON Enter your pincode \n'
         elif text == '1*2':
+
+
             response = 'CON Enter your PINCode \n'
         elif text == '1*3':
             response = 'CON Enter your Address \n'
