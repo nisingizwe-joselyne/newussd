@@ -25,6 +25,7 @@ def ussdapp(request):
         text = request.POST.get('text')
         level = text.split('*')
         response = ''
+        numb = text[:3]
 
         if text == '':
             response = 'CON Welcome to Ida USSD app \n'
@@ -39,9 +40,9 @@ def ussdapp(request):
 
         elif text == '1*1':
             response = 'CON Enter you Name '+str(len(level))+'\n'
-        elif  int(len(level))==3 and str(level[2]) in str(level):
+        elif numb == '1*1'  int(len(level))==3 and str(level[2]) in str(level):
             response = 'CON Enter your IDnumber \n'
-         elif  int(len(level))==4 and str(level[3]) in str(level):
+        elif numb == '1*1' int(len(level))==4 and str(level[3]) in str(level):
             response = 'CON Enter your pincode \n'
         elif text == '1*2':
             response = 'CON Enter your PINCode \n'
