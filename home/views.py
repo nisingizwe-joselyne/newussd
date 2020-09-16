@@ -30,19 +30,27 @@ def ussdapp(request):
             response = 'CON Welcome to Ida USSD app \n'
             response += '1. Girls In Code \n'
             response += '2. SDF Program'
-            
+            # girls in code session
         elif text == '1':
-            response = 'CON Welcome to Girls In Code \n'
+            response = 'CON Welcome to Girls In Code '+str(len(level))+'\n'
             response += '1. Join the Program \n'
             response += '2. Get Activity \n'
             response += '3. Leave'
 
         elif text == '1*1':
-            response = 'CON Enter you Name \n'
+            response = 'CON Enter you Name '+str(len(level))+'\n'
+        elif text == '1*1' and  len(level) == 2 and level[1] in level:
+            response = 'CON Enter your IDnumber \n'
         elif text == '1*2':
             response = 'CON Enter your PINCode \n'
         elif text == '1*3':
             response = 'CON Enter your Address \n'
+         
+        elif text == '2':
+            response = 'CON Welcome to Girls In Code \n'
+            response += '1. Join the Program \n'
+            response += '2. Get Activity \n'
+            response += '3. Leave'
         else:
             response = 'END Invalid Choice'
 
