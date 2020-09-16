@@ -63,6 +63,7 @@ def ussdapp(request):
         return HttpResponse(response)
 
     return HttpResponse('Welcome')
+@csrf_exempt
 def digitalapp (request):
     if request.method == 'POST':
         session_id = request.POST.get('sessionId')
