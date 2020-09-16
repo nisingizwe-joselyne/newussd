@@ -41,6 +41,8 @@ def ussdapp(request):
             response = 'CON Enter you Name '+str(len(level))+'\n'
         elif  int(len(level))==3 and str(level[2]) in str(level):
             response = 'CON Enter your IDnumber \n'
+         elif  int(len(level))==4 and str(level[3]) in str(level):
+            response = 'CON Enter your pincode \n'
         elif text == '1*2':
             response = 'CON Enter your PINCode \n'
         elif text == '1*3':
