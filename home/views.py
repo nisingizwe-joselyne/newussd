@@ -107,7 +107,7 @@ def digitalapp (request):
         elif text == '1*2':
             response = 'CON Enter farmers code \n'
         elif numb == '1*2' and int(len(level))==3 and str(level[2]) in str(level):
-            response = 'your current harvesting in this month of september is 120kg '
+            response = 'CON your current harvesting in this month of september is 120kg '
         # return
         elif text == '1*3':
             response = 'CON welcome to  digital ikigega platform for farmers '+str(len(1))+'\n'
