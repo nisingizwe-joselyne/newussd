@@ -92,12 +92,12 @@ def digitalapp (request):
             response += '1.total harvesting in  the last 3 months \n'
             response += '2.total harvesting in  the last 4 months \n'
             response += '3.total harvesting in  the last 6 months '
-        elif numb == '1*1*1' and int(len(level))==4 and str(level[3]) in str(level):
+        elif text == '1*1*1' :
             response = 'CON your harvesting in the last 3 month is 540kg :\n'
             response += '1.july:220kg \n'
             response += '2.august:260kg \n'
             response += '3.sept:60kg '
-        elif numb == '1*1*2'and int(len(level))==4 and str(level[3]) in str(level):
+        elif text == '1*1*2':
             response = 'CON your harvesting in the last 3 month is 540kg :\n'
             response += '1.june:210kg \n'
             response += '2.july:246kg \n'
@@ -141,15 +141,15 @@ def digitalapp (request):
             response = 'CON Enter mobile-money pin to pay: \n'   
         elif numb == '2*2' and int(len(level))==5 and str(level[4]) in str(level):
             response = 'CON you have succesfully paid the loan thanks: \n'   
-        elif text == '1*3':
+        elif text == '3':
             response = 'CON Other services: \n'
             response += '1.how to become our platform user \n'
             response += '2.how to get loan \n'
-        elif text == '1*3*1':
+        elif text == '3*1':
             response = 'CON how to use our platform: \n'
             response += 'in order to become the user you have to be a member of any registrated cooperative \n'
-        elif text == '1*3*2':
-            response = 'CON you have to be a user of our platform atleast 4 month before getting '
+        elif text == '3*2':
+            response = 'CON you have to be a user of our platform atleast 4 month before getting the loan '
         else:
             response = 'END Invalid Choice'
 
