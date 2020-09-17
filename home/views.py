@@ -92,12 +92,12 @@ def digitalapp (request):
             response += '1.total harvesting in  the last 3 months \n'
             response += '2.total harvesting in  the last 4 months \n'
             response += '3.total harvesting in  the last 6 months '
-        elif text == '1*1*1':
+        elif text == '1*1*1' and int(len(level))==4 and str(level[3]) in str(level):
             response = 'CON your harvesting in the last 3 month is 540kg \n'
             response += '1.july:220kg \n'
             response += '2.august:260kg \n'
             response += '3.sept:60kg \n'
-        elif text == '1*1*2':
+        elif text == '1*1*2' and int(len(level))==4 and str(level[3]) in str(level):
             response = 'CON your harvesting in the last 3 month is 540kg \n'
             response += '1.june:210kg \n'
             response += '2.july:246kg \n'
@@ -125,10 +125,10 @@ def digitalapp (request):
             response = 'CON Enter farmers code or phone number '+str(len(level))+' \n'
         elif numb == '2*1' and int(len(level))==3 and str(level[2]) in str(level):
             response = 'CON you want to get : \n'
-            response += '1.direct loan  of 2 months allowed loan (20000rwf) \n'
-            response += '2.direct loan of 4 months allowed loan (40000rwf) \n'
-            response += '3.dierect loan of 6 months allowed loan (80000rwf) \n'
-            response += '4.dierect loan of 12 months  allowed loan (120000rwf)\n'
+            response += '1.direct loan  of 2 months/allowed loan (20000rwf) \n'
+            response += '2.direct loan of 4 months/allowed loan (40000rwf) \n'
+            response += '3.dierect loan of 6 months/allowed loan (80000rwf) \n'
+            response += '4.dierect loan of 12 months/allowed loan (120000rwf)\n'
         elif numb == '2*1' and int(len(level))==4 and str(level[3]) in str(level):
             response = 'CON Enter the money you want: \n'
         elif numb == '2*1' and int(len(level))==5 and str(level[4]) in str(level):
@@ -149,7 +149,7 @@ def digitalapp (request):
             response = 'CON how to use our platform: \n'
             response += 'in order to become the user you have to be a member of any registrated cooperative \n'
         elif text == '1*3*2':
-             response = 'CON you have to be a user of our platform atleast 4 month before getting loan'
+            response = 'CON you have to be a user of our platform atleast 4 month before getting '
         else:
             response = 'END Invalid Choice'
 
