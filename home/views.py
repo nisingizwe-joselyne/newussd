@@ -85,14 +85,14 @@ def digitalapp (request):
             response += '2. monthly current harvesting data \n'
             response += '3. return'
             # current harvesting session
-        elif text == '1*1':
-            response = 'CON Enter farmers code or phone number '+str(len(level))+' \n'
         
-        elif numb == '1*1' and int(len(level))==3 and str(level[2]) in str(level):
+        elif text == '1*1':
             response = 'CON you want tocheck on ur : \n'
             response += '1.total harvesting in  the last 3 months \n'
             response += '2.total harvesting in  the last 4 months \n'
             response += '3.total harvesting in  the last 6 months '
+        elif numb == '1*1' and int(len(level))==3 and str(level[2]) in str(level):
+            response = 'CON Enter farmers code or phone number '
         elif text == '1*1*1' :
             response = 'CON your harvesting in the last 3 month is 540kg :\n'
             response += '1.july:220kg \n'
