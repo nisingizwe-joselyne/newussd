@@ -93,17 +93,12 @@ def digitalapp (request):
             response += '3.total harvesting in  the last 6 months '
         elif numb == '1*1' and int(len(level))==3 and str(level[2]) in str(level):
             response = 'CON Enter farmers code or phone number '
-        elif text == '1*1*1' :
-            response = 'CON your harvesting in the last 3 month is 540kg :\n'
-            response += '1.july:220kg \n'
+        elif text == '1*1' and int(len(level))==4 and str(level[3]) in str(level):
+            response = 'CON your harvesting is \n'
+            response += '1.july:215kg \n'
             response += '2.august:260kg \n'
             response += '3.sept:60kg '
-        elif text == '1*1*2':
-            response = 'CON your harvesting in the last 3 month is 540kg :\n'
-            response += '1.june:210kg \n'
-            response += '2.july:246kg \n'
-            response += '3.august:260kg '
-            response += '4.sept:80kg'
+        
             # monthly current harvesting
         elif text == '1*2':
             response = 'CON Enter farmers code \n'
