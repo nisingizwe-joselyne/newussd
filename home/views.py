@@ -119,7 +119,7 @@ def digitalapp (request):
         elif numb == '1*2*1' and int(len(level))==6 and str(level[5]) in str(level):
             response = 'CON  you have required to get 25000 rwf loan Enter mobile money pin code to confirm that will be paid in 2 months: \n'
         elif text == '1*2*2':
-            response = 'CON Enter farmers code \n'
+            response = 'CON Enter farmers code '+str(len(level))+' \n'
         elif numb == '1*2*2' and int(len(level))==3 and str(level[2]) in str(level):
             response = 'CON Enter the money you want pay: \n'   
         elif numb == '1*2*2' and int(len(level))==4 and str(level[3]) in str(level):
