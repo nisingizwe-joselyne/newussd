@@ -75,22 +75,23 @@ def digitalapp (request):
         numb = text[:3]
         if text == '':
             response = 'CON welcome to  digital ikigega platform for farmers: \n'
-            response += '1. 1.harvesting services \n'
-            response += '2. fincial services \n'
-            response += '3.other services'
+            response += '1. rice \n'
+            response += '2. milk \n'
+            response += '3.coffee \n'
+            response += '4.Fruits \n'
+            response += '5.beans'
             #  harvesting session
         elif text == '1':
             response = 'CON welcome to  digital ikigega platform for farmers '+str(len(level))+'\n'
-            response += '1. current total harvesting data \n'
-            response += '2. monthly current harvesting data \n'
-            response += '3. return'
+            response += '1. Harvesting services \n'
+            response += '2. financial service \n'
+            response += '3. other services'
             # current harvesting session
-        
         elif text == '1*1':
-            response = 'CON you want tocheck on ur : \n'
-            response += '1.total harvesting in  the last 3 months \n'
-            response += '2.total harvesting in  the last 4 months \n'
-            response += '3.total harvesting in  the last 6 months '
+            response = 'CON  harvesting checking '+str(len(level))+': \n'
+            response += '1.current total harvesting \n'
+            response += '2.currently monthly harvesting \n'
+            response += '3.other '
         elif numb == '1*1' and int(len(level))==3 and str(level[2]) in str(level):
             response = 'CON Enter farmers code or phone number '
         elif numb == '1*1' and int(len(level))==4 and str(level[3]) in str(level):
@@ -98,54 +99,42 @@ def digitalapp (request):
             response += '1.july:215kg \n'
             response += '2.august:260kg \n'
             response += '3.sept:60kg '
-        
-            # monthly current harvesting
-        elif text == '1*2':
-            response = 'CON Enter farmers code \n'
-        elif numb == '1*2' and int(len(level))==3 and str(level[2]) in str(level):
-            response = 'CON your current harvesting in this month of september is 120kg '
-        # return
-        elif text == '1*3':
-            response = 'CON welcome to  digital ikigega platform for farmers '+str(len(1))+'\n'
-            response += '1. current total harvesting data \n'
-            response += '2. monthly current harvesting data \n'
-            response += '3. return'
         #  financial session
-        elif text == '2':
+        elif text == '1*2':
             response = 'CON Welcome to the financial services  \n'
             response += '1. direct loan \n'
             response += '2. pay loan \n'
             response += '3. how to get loan'
             # direct loan session
-        elif text == '2*1':
+        elif text == '1*2*1':
             response = 'CON Enter farmers code or phone number '+str(len(level))+' \n'
-        elif numb == '2*1' and int(len(level))==3 and str(level[2]) in str(level):
+        elif numb == '1*2*1' and int(len(level))==4 and str(level[3]) in str(level):
             response = 'CON you want to get : \n'
             response += '1.direct loan  of 2 months/allowed loan (20000rwf) \n'
             response += '2.direct loan of 4 months/allowed loan (40000rwf) \n'
             response += '3.dierect loan of 6 months/allowed loan (80000rwf) \n'
             response += '4.dierect loan of 12 months/allowed loan (120000rwf)\n'
-        elif numb == '2*1' and int(len(level))==4 and str(level[3]) in str(level):
+        elif numb == '1*2*1' and int(len(level))==5 and str(level[4]) in str(level):
             response = 'CON Enter the money you want: \n'
-        elif numb == '2*1' and int(len(level))==5 and str(level[4]) in str(level):
-            response = 'CON  you have required to get 25000 rwf loan Enter ur pin code to confirm: \n'
-        elif text == '2*2':
+        elif numb == '1*2*1' and int(len(level))==6 and str(level[5]) in str(level):
+            response = 'CON  you have required to get 25000 rwf loan Enter ur pin code to confirm that will be paid in 2 months: \n'
+        elif text == '1*2*2':
             response = 'CON Enter farmers code \n'
-        elif numb == '2*2' and int(len(level))==3 and str(level[2]) in str(level):
+        elif numb == '1*2*2' and int(len(level))==4 and str(level[3]) in str(level):
             response = 'CON Enter the money you want pay: \n'   
-        elif numb == '2*2' and int(len(level))==4 and str(level[3]) in str(level):
+        elif numb == '1*2*2' and int(len(level))==5 and str(level[4]) in str(level):
             response = 'CON Enter mobile-money pin to pay: \n'   
-        elif numb == '2*2' and int(len(level))==5 and str(level[4]) in str(level):
+        elif numb == '1*2*2' and int(len(level))==6 and str(level[5]) in str(level):
             response = 'CON you have succesfully paid the loan thanks: \n'   
-        elif text == '3':
+        elif text == '1*3':
             response = 'CON Other services: \n'
             response += '1.how to become our platform user \n'
             response += '2.how to get loan \n'
-        elif text == '3*1':
-            response = 'CON how to use our platform: \n'
+        elif text == '1*3*1':
+            response = 'END how to use our platform: \n'
             response += 'in order to become the user you have to be a member of any registrated cooperative \n'
-        elif text == '3*2':
-            response = 'CON you have to be a user of our platform atleast 4 month before getting the loan '
+        elif text == '1*3*2':
+            response = 'END you have to be a user of our platform atleast 4 month before getting the loan '
         else:
             response = 'END Invalid Choice'
 
