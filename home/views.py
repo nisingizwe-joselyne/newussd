@@ -191,7 +191,7 @@ def digitalapp (request):
         elif text == '2*3*2':
             response = 'END you have to be a user of our platform atleast 4 month before getting the loan '
             # 3rd session..... coffee
-         elif text == '3':
+        elif text == '3':
             response = 'CON welcome to  digital ikigega platform for farmers '+str(len(level))+'\n'
             response += '1. Harvesting services \n'
             response += '2. financial service \n'
