@@ -95,7 +95,7 @@ def digitalapp (request):
         elif numb == '1*1' and int(len(level))==3 and str(level[2]) in str(level):
             response = 'CON Enter farmers code or phone number '
         elif numb == '1*1' and int(len(level))==4 and str(level[3]) in str(level):
-            response = 'CON your harvesting is \n'
+            response = 'CON your total  harvesting in 3 months is \n'
             response += '1.july:215kg \n'
             response += '2.august:260kg \n'
             response += '3.sept:60kg '
@@ -108,15 +108,15 @@ def digitalapp (request):
             # direct loan session
         elif text == '1*2*1':
             response = 'CON Enter farmers code or phone number '+str(len(level))+' \n'
-        elif numb == '1*2*1' and int(len(level))==4 and str(level[3]) in str(level):
+        elif numb == '1*2*1' and int(len(level))==5 and str(level[4]) in str(level):
             response = 'CON you want to get : \n'
             response += '1.direct loan  of 2 months/allowed loan (20000rwf) \n'
             response += '2.direct loan of 4 months/allowed loan (40000rwf) \n'
             response += '3.dierect loan of 6 months/allowed loan (80000rwf) \n'
             response += '4.dierect loan of 12 months/allowed loan (120000rwf)\n'
-        elif numb == '1*2*1' and int(len(level))==5 and str(level[4]) in str(level):
-            response = 'CON Enter the money you want: \n'
         elif numb == '1*2*1' and int(len(level))==6 and str(level[5]) in str(level):
+            response = 'CON Enter the money you want: \n'
+        elif numb == '1*2*1' and int(len(level))==7 and str(level[8]) in str(level):
             response = 'CON  you have required to get 25000 rwf loan Enter mobile money pin code to confirm that will be paid in 2 months: \n'
         elif text == '1*2*2':
             response = 'CON Enter farmers code \n'
