@@ -100,9 +100,9 @@ def digitalapp (request):
             response += '1.july:215kg \n'
             response += '2.august:260kg \n'
             response += '3.sept:60kg '
-        elif text == '1*1*1':
+        elif text == '1*1*2':
             response = 'CON Enter  farmers code or phone number \n'
-        elif numb == '1*1*1'and int(len(level))==4 and str(level[3]) in str(level):
+        elif numb == '1*1*2'and int(len(level))==4 and str(level[3]) in str(level):
             response = 'CON your monthly current harvesting is 140kg \n'
         #  financial session
         elif text == '1*2':
