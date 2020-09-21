@@ -92,11 +92,10 @@ def digitalapp (request):
             response = 'CON  harvesting checking : \n'
             response += '1.current total harvesting \n'
             response += '2.currently monthly harvesting \n'
-            response += '3.other '
-        elif numb == '1*1' and int(len(level))==3 and str(level[2]) in str(level):
+        elif text == '1*1*1':
             response = 'CON Enter farmers code or phone number \n'
-        elif numb == '1*1' and int(len(level))==4 and str(level[3]) in str(level):
-            response = 'CON your current total  harvesting in 3 months is \n'
+        elif numb == '1*1*1' and int(len(level))==4 and str(level[3]) in str(level):
+            response = 'CON your current total  harvesting is \n'
             response += '1.july:215kg \n'
             response += '2.august:260kg \n'
             response += '3.sept:60kg '
@@ -152,16 +151,16 @@ def digitalapp (request):
             response += '1.current total harvesting \n'
             response += '2.currently monthly harvesting \n'
             response += '3.other '
-        elif numb == '2*1' and int(len(level))==3 and str(level[2]) in str(level):
-            response = 'CON Enter farmers code or phone number '
-        elif numb == '2*1' and int(len(level))==4 and str(level[3]) in str(level):
-            response = 'CON your total total harvesting  is \n'
+        elif text == '2*1*1':
+            response = 'CON Enter farmers code or phone number \n'
+        elif numb == '2*1*1' and int(len(level))==4 and str(level[3]) in str(level):
+            response = 'CON your current total  harvesting is \n'
             response += '1.july:215kg \n'
             response += '2.august:260kg \n'
             response += '3.sept:60kg '
-        elif text == '2*1*1':
+        elif text == '2*1*2':
             response = 'CON Enter  farmers code or phone number \n'
-        elif numb == '2*1*1'and int(len(level))==4 and str(level[3]) in str(level):
+        elif numb == '2*1*2'and int(len(level))==4 and str(level[3]) in str(level):
             response = 'CON your monthly current harvesting is 140kg \n'
         #  financial session
         elif text == '2*2':
@@ -211,16 +210,16 @@ def digitalapp (request):
             response += '1.current total harvesting \n'
             response += '2.currently monthly harvesting \n'
             response += '3.other '
-        elif numb == '3*1' and int(len(level))==3 and str(level[2]) in str(level):
-            response = 'CON Enter farmers code or phone number '
-        elif numb == '3*1' and int(len(level))==4 and str(level[3]) in str(level):
-            response = 'CON your current total  harvesting  is \n'
+        elif text == '3*1*1':
+            response = 'CON Enter farmers code or phone number \n'
+        elif numb == '3*1*1' and int(len(level))==4 and str(level[3]) in str(level):
+            response = 'CON your current total  harvesting is \n'
             response += '1.july:215kg \n'
             response += '2.august:260kg \n'
             response += '3.sept:60kg '
-        elif text == '3*1*1':
+        elif text == '3*1*2':
             response = 'CON Enter  farmers code or phone number \n'
-        elif numb == '3*1*1'and int(len(level))==4 and str(level[3]) in str(level):
+        elif numb == '3*1*2'and int(len(level))==4 and str(level[3]) in str(level):
             response = 'CON your monthly current harvesting is 140kg \n'
         #  financial session
         elif text == '3*2':
