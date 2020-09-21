@@ -78,8 +78,9 @@ def digitalapp (request):
             response += '1. rice \n'
             response += '2. milk \n'
             response += '3.coffee \n'
-            response += '4.Fruits \n'
-            response += '5.beans'
+            response += '4.Wheat \n'
+            response += '5.Fruits \n'
+            response += '6.maize'
             #  harvesting session
         elif text == '1':
             response = 'CON welcome to  digital ikigega platform for farmers '+str(len(level))+'\n'
@@ -154,10 +155,14 @@ def digitalapp (request):
         elif numb == '2*1' and int(len(level))==3 and str(level[2]) in str(level):
             response = 'CON Enter farmers code or phone number '
         elif numb == '2*1' and int(len(level))==4 and str(level[3]) in str(level):
-            response = 'CON your total  harvesting in 3 months is \n'
+            response = 'CON your total total harvesting  is \n'
             response += '1.july:215kg \n'
             response += '2.august:260kg \n'
             response += '3.sept:60kg '
+        elif text == '2*1*1':
+            response = 'CON Enter  farmers code or phone number \n'
+        elif numb == '2*1*1'and int(len(level))==4 and str(level[3]) in str(level):
+            response = 'CON your monthly current harvesting is 140kg \n'
         #  financial session
         elif text == '2*2':
             response = 'CON Welcome to the financial services  \n'
@@ -209,10 +214,14 @@ def digitalapp (request):
         elif numb == '3*1' and int(len(level))==3 and str(level[2]) in str(level):
             response = 'CON Enter farmers code or phone number '
         elif numb == '3*1' and int(len(level))==4 and str(level[3]) in str(level):
-            response = 'CON your total  harvesting in 3 months is \n'
+            response = 'CON your current total  harvesting  is \n'
             response += '1.july:215kg \n'
             response += '2.august:260kg \n'
             response += '3.sept:60kg '
+        elif text == '3*1*1':
+            response = 'CON Enter  farmers code or phone number \n'
+        elif numb == '3*1*1'and int(len(level))==4 and str(level[3]) in str(level):
+            response = 'CON your monthly current harvesting is 140kg \n'
         #  financial session
         elif text == '3*2':
             response = 'CON Welcome to the financial services  \n'
