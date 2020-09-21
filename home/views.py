@@ -11,8 +11,8 @@ def welcome(request):
     return render(request,'popschools.html') 
 def about(request):
     return render(request,'about.html')
-def pricing(request):
-    return render(request,'pricing.html')
+def myweb(request):
+    return render(request,'myweb.html')
     africastalking.initialize(username,api_key)
 
 @csrf_exempt
@@ -88,17 +88,21 @@ def digitalapp (request):
             response += '3. other services'
             # current harvesting session
         elif text == '1*1':
-            response = 'CON  harvesting checking '+str(len(level))+': \n'
+            response = 'CON  harvesting checking : \n'
             response += '1.current total harvesting \n'
             response += '2.currently monthly harvesting \n'
             response += '3.other '
         elif numb == '1*1' and int(len(level))==3 and str(level[2]) in str(level):
-            response = 'CON Enter farmers code or phone number '
+            response = 'CON Enter farmers code or phone number \n'
         elif numb == '1*1' and int(len(level))==4 and str(level[3]) in str(level):
-            response = 'CON your total  harvesting in 3 months is \n'
+            response = 'CON your current total  harvesting in 3 months is \n'
             response += '1.july:215kg \n'
             response += '2.august:260kg \n'
             response += '3.sept:60kg '
+        elif text == '1*1*1':
+            response = 'CON Enter  farmers code or phone number \n'
+        elif numb == '1*1*1'and int(len(level))==4 and str(level[3]) in str(level):
+            response = 'CON your monthly current harvesting is 140kg \n'
         #  financial session
         elif text == '1*2':
             response = 'CON Welcome to the financial services  \n'
