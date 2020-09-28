@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YIDHO</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/css/uikit.min.css" />
+
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/js/uikit-icons.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class=" container bg-pink-200 p-4">
+    <nav class="navbar  bg-gray-500">
+        <a class="navbar-brand w-1/6 text-black-300" href="#">YIDHO</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="flex gap-6 w-4/6" >
+          <ul style="list-style: none;" class="flex gap-4">
+            <li >
+              <a href="#" class="text-black-300">Home</a>
+            </li>
+            <li >
+              <a href="#" class="text-black-300">about us</a>
+            </li>
+
+          </ul>
+          <form class="form-inline px-20 ">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0 rounded-full" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+      <br>
+      <br>
+      <div class="flex">
+        <div class="w-1/2">
+        <img src="{% static 'image/scrnsht.JPG' %}" class="border-solid border-purple border-4 rounded-lg"
+        >
+        <h2></h2>
+        </div>
+        <div class="w-1/2">
+          <h1 class="text-black text-2xl px-4 font-bold">YOUTH INITIATIVES FOR DEVELOPMENT AND HUMAN RIGHTS (YiDHO)</h1>
+          <hr>
+          <div class="dropdown px-4">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              categories
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Founding members</a>
+              <a class="dropdown-item" href="#">Adherent members</a>
+              <a class="dropdown-item" href="#">Honorary members</a>
+            </div>
+          </div>
+          <h2 class="px-4">OUR vision</h2>
+            <p class="text-xl px-4 ">
+
+               <span class="font-bold text-purple-500">We envision to have youth advocates of</span> 
+               <span class="font-bold text-black-300">human rights and peaceful development.</span>
+            </p>
+         <div class="px-4"> <img src="{% static 'image/Annotation.JPG' %}" data-aos="fade-down"
+          data-aos-easing="linear"></div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+          <div>
+            
+              <p class="text-sm">The General Assembly is convened and headed 
+                by the President of executive Committee. In his/her absence 
+                he/she shall temporarily be replaced by the Vice President. 
+                If both of them are absent or unwilling, the general Assembly 
+                shall be convened in written invitation signed by ½ of the 
+                effective members and designate 
+                a chairperson and reporter of the meeting. 
+              </p>
+          </div>
+      </div>
+      <br>
+          <div class="row px-4 bg-green-300">
+            <div class="w-3/6">
+            <h2 class="text-2xl font-bold">working system</h2>
+            <hr>
+          <p class="text-gray  text-xl">Founding members shall be committed to 
+            actively participate to the organization’s activities. 
+            They attend the General Assembly meetings and have rights to vote. 
+            They are required to pay monthly and voluntary
+             contribution agreed by the General Assembly.</p>
+          </div>
+          <div class="w-3/6 px-4">
+           <img src="{% static 'image/rice.jpg' %}" height="100px">
+          </div>
+      </div>
+     
+    </div>
+    <br>
+    <br>
+    <div class="bg-black px-4">
+      <h3 class="text-purple text-2xl text-bold text-center">Follow us for more update</h3>
+   <div class="flex  ">
+   
+     <div class="col-3 py-4 ">
+      <a href="" class="uk-icon-button" uk-icon="twitter"></a>
+     </div>
+     <div class="col-3 py-4">
+      <a href="" class="uk-icon-button" uk-icon="facebook"></a>
+     </div>
+     <div class="col-3 py-4">
+      <a href="" class="uk-icon-button" uk-icon="instagram"></a>
+     </div>
+     <div class="col-3 py-4">
+      <a href="" class="uk-icon-button" uk-icon="google"></a>
+     </div>
+   </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

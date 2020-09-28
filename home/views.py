@@ -8,7 +8,7 @@ api_key = "7d5ec7e665579ee7ef1a3a71927f74123d0542960de776089cc89b28b4977804"
 # Create your views here.
 
 def welcome(request):
-    return render(request,'popschools.html') 
+    return render(request,'smart.html') 
 def about(request):
     return render(request,'about.html')
 def myweb(request):
