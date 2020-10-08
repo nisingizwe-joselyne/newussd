@@ -8,7 +8,7 @@ api_key = "7d5ec7e665579ee7ef1a3a71927f74123d0542960de776089cc89b28b4977804"
 # Create your views here.
 
 def welcome(request):
-    return render(request,'smart.html') 
+    return render(request,'stand.html') 
 def about(request):
     return render(request,'about.html')
 def myweb(request):
@@ -86,7 +86,7 @@ def digitalapp (request):
             response = 'CON welcome to  digital ikigega platform for farmers '+str(len(level))+'\n'
             response += '1. Harvesting services \n'
             response += '2. financial service \n'
-            response += '3. other services'
+            response += '3. Insurance services'
             # current harvesting session
         elif text == '1*1':
             response = 'CON  harvesting checking : \n'
@@ -132,19 +132,19 @@ def digitalapp (request):
             response = 'CON you have succesfully paid the loan thanks: \n'   
         elif text == '1*3':
             response = 'CON Other services: \n'
-            response += '1.how to become our platform user \n'
-            response += '2.how to get loan \n'
+            response += '1.how to get crops insurance\n'
+            response += '2.join crops insurance \n'
         elif text == '1*3*1':
-            response = 'END how to use our platform: \n'
-            response += 'in order to become the user you have to be a member of any registrated cooperative \n'
+            response = 'END how to get crops insurance: \n'
+            response += 'in order to get crops insorance you have to be an active member of any registrated cooperative in our system \n'
         elif text == '1*3*2':
-            response = 'END you have to be a user of our platform atleast 4 month before getting the loan '
+            response = 'END you have to be a user of our platform atleast 4 month before getting the insurance '
             # 2nd session milk
         elif text == '2':
             response = 'CON welcome to  digital ikigega platform for farmers '+str(len(level))+'\n'
             response += '1. Harvesting services \n'
             response += '2. financial service \n'
-            response += '3. other services'
+            response += '3.insurance services '
             # current harvesting session
         elif text == '2*1':
             response = 'CON  harvesting checking '+str(len(level))+': \n'
@@ -191,19 +191,19 @@ def digitalapp (request):
             response = 'CON you have succesfully paid the loan thanks: \n'   
         elif text == '2*3':
             response = 'CON Other services: \n'
-            response += '1.how to become our platform user \n'
-            response += '2.how to get loan \n'
+            response += '1.how to get harvesting insurance \n'
+            response += '2.get harvesting insurance\n'
         elif text == '2*3*1':
-            response = 'END how to use our platform: \n'
-            response += 'in order to become the user you have to be a member of any registrated cooperative \n'
+            response = 'END how to get harvesting insurance: \n'
+            response += 'in order to get ur harvesting insurance you have to be a member of any registrated cooperative \n'
         elif text == '2*3*2':
-            response = 'END you have to be a user of our platform atleast 4 month before getting the loan '
+            response = 'END you have to be a user of our platform atleast 2 month before getting the harvesting insurance '
             # 3rd session..... coffee
         elif text == '3':
             response = 'CON welcome to  digital ikigega platform for farmers '+str(len(level))+'\n'
             response += '1. Harvesting services \n'
             response += '2. financial service \n'
-            response += '3. other services'
+            response += '3.insurance services'
             # current harvesting session
         elif text == '3*1':
             response = 'CON  harvesting checking '+str(len(level))+': \n'
@@ -309,19 +309,19 @@ def digitalapp (request):
             response = 'CON you have succesfully paid the loan thanks: \n'   
         elif text == '3*3':
             response = 'CON Other services: \n'
-            response += '1.how to become our platform user \n'
-            response += '2.how to get loan \n'
+            response += '1.how to get crops insurance \n'
+            response += '2. get insurance \n'
         elif text == '3*3*1':
             response = 'END how to use our platform: \n'
             response += 'in order to become the user you have to be a member of any registrated cooperative \n'
         elif text == '3*3*2':
-            response = 'END you have to be a user of our platform atleast 4 month before getting the loan '
+            response = 'CON Enter farmer code\n '
         # session four ...wheat
         elif text == '4':
             response = 'CON welcome to  digital ikigega platform for farmers '+str(len(level))+'\n'
             response += '1. Harvesting services \n'
             response += '2. financial service \n'
-            response += '3. other services'
+            response += '3. Insurance services'
             # current harvesting session
         elif text == '4*1':
             response = 'CON  harvesting checking '+str(len(level))+': \n'
@@ -380,7 +380,7 @@ def digitalapp (request):
             response = 'CON welcome to  digital ikigega platform for farmers '+str(len(level))+'\n'
             response += '1. Harvesting services \n'
             response += '2. financial service \n'
-            response += '3. other services'
+            response += '3. Insurance services'
             # current harvesting session
         elif text == '5*1':
             response = 'CON  harvesting checking '+str(len(level))+': \n'
@@ -427,13 +427,15 @@ def digitalapp (request):
             response = 'CON you have succesfully paid the loan thanks: \n'   
         elif text == '5*3':
             response = 'CON Other services: \n'
-            response += '1.how to become our platform user \n'
-            response += '2.how to get loan \n'
+            response += '1.how to get harvesting insurance \n'
+            response += '2.get harvesting insurance \n'
         elif text == '5*3*1':
-            response = 'END how to use our platform: \n'
-            response += 'in order to become the user you have to be a member of any registrated cooperative \n'
+            response = 'END how to get harvesting insurance: \n'
+            response += 'in order to get harvesting insurance you have to be an active member of registered cooperatives in our system \n'
         elif text == '5*3*2':
-            response = 'END you have to be a user of our platform atleast 4 month before getting the loan '
+            response = 'CON enter farmers code\n '
+        elif num == '5*3*2'and int(len(level))==4 and str(level[3]) in str(level):
+            response = 'CON you will get the notification on of ur request by phone\n'
         # 6th session ....fruits
         else:
             response = 'END Invalid Choice'
