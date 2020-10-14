@@ -1,7 +1,10 @@
 from django.shortcuts import render
 import africastalking
-from django.http import HttpResponse
+from .models import*
+from .serializers import*
+from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+from rest_framework.parsers import JSONParser
 
 username = "nesjoselyne@gmail.com"
 api_key = "7d5ec7e665579ee7ef1a3a71927f74123d0542960de776089cc89b28b4977804"
@@ -11,8 +14,8 @@ def welcome(request):
     return render(request,'stand.html') 
 def about(request):
     return render(request,'about.html')
-def myweb(request):
-    return render(request,'myweb.html')
+def Ikigega(request):
+    return render(request,'ikigega.html')
     africastalking.initialize(username,api_key)
 
 @csrf_exempt
@@ -434,7 +437,7 @@ def digitalapp (request):
             response += 'in order to get harvesting insurance you have to be an active member of registered cooperatives in our system \n'
         elif text == '5*3*2':
             response = 'CON enter farmers code\n '
-        elif num == '5*3*2'and int(len(level))==4 and str(level[3]) in str(level):
+        elif numb == '5*3*2'and int(len(level))==4 and str(level[3]) in str(level):
             response = 'CON you will get the notification on of ur request by phone\n'
         # 6th session ....fruits
         else:
@@ -446,3 +449,129 @@ def digitalapp (request):
         return HttpResponse(response)
 
     return HttpResponse('ikigega')
+
+def registration(request):
+    select = Registration.objects.all()
+    if request.method == 'POST':
+        names = request.POST['names']
+        email = request.POST['email']
+        phone = request.POST['phone']
+        insert = Registration(names=names,email=email,phone=phone)
+        try:
+            insert.save()
+            return render(request,'register.html',{'message':'data has been inserted succesful','data':select})
+        except :
+            return render(request,'register.html',{'message':'failed to insert','data':select})
+    return render(request,'register.html',{'data':select})
+
+def delreg(request,id):
+    select = Registration.objects.all().order_by('id')
+    deleteInfos = Registration.objects.get(id=id).delete()
+    return render(request,'register.html',{'message':'data has been deleted','data':select})
+def updatereg(request,id):
+    select = Registration.objects.all().order_by('id')
+    update = Registration.objects.get(id=id)
+    if request.method=='POST':
+        update.names = request.POST['names']
+        update.email =request.POST['email']
+        update.phone = request.POST['phone']
+        try:
+            update.save()
+            return render(request, 'updateregister.html',{'message':'Data has been updated','data':select,'update':update})
+        except:
+            return render(request, 'updateregister.html',{'message':'Fails to update','data':select,'update':update})
+    return render(request, 'updateregister.html',{'data':select,'update':update})
+
+# =========building the sereliazer endpoint
+@csrf_exempt
+def registerEndpoint(request):
+    """
+    List all code snippets, or create a new snippet.
+    """
+    if request.method == 'GET':
+        reg = Registration.objects.all()
+        serializer = RegisterSerializer(reg, many=True)
+        return JsonResponse(serializer.data, safe=False)
+    elif request.method == 'POST':
+        data = JSONParser().parse(request) #request data
+        serializer = RegisterSerializer(data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse({'message':'sucecesful', 'data':serializer.data}, status=201)
+        return JsonResponse(serializer.errors, status=400)
+
+        # delete/put/get/
+
+@csrf_exempt
+def deleteEndpoint(request,id):
+    """
+    List all code snippets, or create a new snippet.
+    """
+    if request.method == 'GET':
+        # try:
+        #     reg = Registration.objects.get(id=id)
+        # except Registration.objects.get(id=id) DoesNotExist:
+        #      return JsonResponse({'message':'data has been deleted'}, status= 409)
+        reg = Registration.objects.get(id=id)
+        serializer = RegisterSerializer(reg, many=False)
+        return JsonResponse(serializer.data, safe=False)
+    elif request.method == 'DELETE':
+        delete = Registration.objects.get(id=id).delete()
+        return JsonResponse({'message':'data has been deleted'}, status= 409)
+    if request.method == 'PUT':
+        # try:
+        #     reg = Registration.objects.get(id=id)
+        # except Registration.objects.get(id=id) DoesNotExist:
+        #      return JsonResponse({'message':'data has been deleted'}, status= 409)
+        data = JSONParser().parse(request)
+        reg = Registration.objects.get(id=id)
+        serializer = RegisterSerializer(reg, data=data)
+        if serializer.is_valid:
+            serializer.save()
+            return JsonResponse({'message':'successfull updated','data':serializer.data}, status=201)
+        return JsonResponse(serializer.errors, status=400)
+
+# def injira(request):
+#     context = {}
+#     if request.method == "POST":
+#         username = request.POST['username']
+#         password = request.POST['password']
+#         kir = Profile.objects.filter(username=username)
+#         for kiru in kir:
+#             account = kiru.accounttype
+#         user = authenticate(request, username=username,
+#                             password=password, is_superuser=1)
+#         if user is not None and user.is_superuser == 1:
+#             # user.is_active:
+#             login(request, user)
+#             return HttpResponseRedirect(reverse('success'))
+#         elif user is not None and user.is_superuser == 0:
+#             if  account == 'agent':
+#                 login(request, user)
+#                 return HttpResponseRedirect(reverse('agents'))
+#             else:
+#                 return render(request, 'home/authentication-login.html', {'error':'You are not allowed to enterlogin here!' })
+#         else:
+#             ki = "Password and Username Incorrect! Try Again"
+#             sel = Addcontent.objects.all().filter(
+#                 category="back").order_by('-id')[:1]
+#             return render(request, 'home/authentication-login.html', {'error': ki, 'back': sel, })
+#     else:
+#         context = {}
+#         sel = Addcontent.objects.all().filter(
+#             category="back").order_by('-id')[:1]
+#         return render(request, 'home/authentication-login.html', {'back': sel, })
+# @user_passes_test(lambda u: u.is_superuser, login_url='injira')
+# def index(request):
+#     return render(request, 'home/authentication-login.html')
+# def loggedout(request):
+#     if request.method == 'POST':
+#         auth.logout(request)
+#     return render(request, 'home/authentication-login.html')
+# def logout(request):
+#     return render(request, 'home/authentication-login.html')
+
+
+
+
+

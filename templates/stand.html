@@ -74,7 +74,7 @@
   </button>
   <div class="dropdown-menu">
     <a class="dropdown-item" href="#">home</a>
-    <a class="dropdown-item" href="#">About us</a>
+    <a class="dropdown-item" href="www.about.com"> About </a>
     <a class="dropdown-item" href="#">our services</a>
     <div class="dropdown-divider"></div>
     <a class="dropdown-item" href="#">become our partner</a>
@@ -82,7 +82,22 @@
 </div>
  
           <!-- Right -->
-
+ <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               D.IKIGEGA
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="{% url 'ikigega' %}">Ikigega</a>
+              <a class="dropdown-item" href="www.financial.com">Financial services</a>
+              <a class="dropdown-item" href="#">Harvesting insurance</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">become our system user</a>
+            </div>
+          </div>
+          
+          <a href="{% url 'register' %}">Registration</a>
+          
+        </div>
         </div>
 
       </div>

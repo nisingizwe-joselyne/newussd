@@ -1,10 +1,10 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YIDHO</title>
+    <title> ikigega system</title>
+    <link rel="icon" type="icon/jpg"  href="image/rice.jpg" >
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- UIkit CSS -->
@@ -22,7 +22,7 @@
 <body>
     <div class=" container bg-pink-200 p-4">
     <nav class="navbar  bg-gray-500">
-        <a class="navbar-brand w-1/6 text-black-300" href="#">YIDHO</a>
+        <a class="navbar-brand w-1/6 text-black-300" href="#">S.Ikigega</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -30,10 +30,10 @@
         <div class="flex gap-6 w-4/6" >
           <ul style="list-style: none;" class="flex gap-4">
             <li >
-              <a href="#" class="text-black-300">Home</a>
+              <a href="url 'home'" class="text-black-300">Home</a>
             </li>
             <li >
-              <a href="#" class="text-black-300">about us</a>
+              <a href="url 'about-us'" class="text-black-300">about us</a>
             </li>
 
           </ul>
@@ -47,44 +47,46 @@
       <br>
       <div class="flex">
         <div class="w-1/2">
-        <img src="{% static 'image/scrnsht.JPG' %}" class="border-solid border-purple border-4 rounded-lg"
-        >
+        <img src="image/farmers all.jpg" class="border-solid border-purple border-4 rounded-lg"
+        data-aos="fade-down"
+        data-aos-easing="linear">
         <h2></h2>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            categories
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">wheat</a>
+            <a class="dropdown-item" href="#">milk</a>
+            <a class="dropdown-item" href="#">rice</a>
+            <a class="dropdown-item" href="#">coffee</a>
+            <a class="dropdown-item" href="#">fruits</a>
+            <a class="dropdown-item" href="#">maize</a>
+          </div>
+        </div>
         </div>
         <div class="w-1/2">
-          <h1 class="text-black text-2xl px-4 font-bold">YOUTH INITIATIVES FOR DEVELOPMENT AND HUMAN RIGHTS (YiDHO)</h1>
+          <h1 class="text-black text-2xl px-4 font-bold">Smart ikigega short description</h1>
           <hr>
-          <div class="dropdown px-4">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              categories
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Founding members</a>
-              <a class="dropdown-item" href="#">Adherent members</a>
-              <a class="dropdown-item" href="#">Honorary members</a>
-            </div>
-          </div>
-          <h2 class="px-4">OUR vision</h2>
             <p class="text-xl px-4 ">
 
-               <span class="font-bold text-purple-500">We envision to have youth advocates of</span> 
-               <span class="font-bold text-black-300">human rights and peaceful development.</span>
+               <span class="font-bold text-purple-500"> we help farmers to store their harvesting data</span> 
+               <span class="font-bold text-black-300">  in digital way as well as helping them to get direct 
+                loan on their phones</span>
             </p>
-         <div class="px-4"> <img src="{% static 'image/Annotation.JPG' %}" data-aos="fade-down"
-          data-aos-easing="linear"></div>
+         <div class="px-4"> <img src="image/phone.jpg"></div>
         </div>
       </div>
       <br>
       <div class="row">
           <div>
             
-              <p class="text-sm">The General Assembly is convened and headed 
-                by the President of executive Committee. In his/her absence 
-                he/she shall temporarily be replaced by the Vice President. 
-                If both of them are absent or unwilling, the general Assembly 
-                shall be convened in written invitation signed by ½ of the 
-                effective members and designate 
-                a chairperson and reporter of the meeting. 
+              <p class="text-sm">We are dedicated to help farmers to be 
+                  financially independent.through their harvesting record
+                  We are dedicated to help farmers to be 
+                  financially independent.through their harvesting record
+                  We are dedicated to help farmers to be 
+                  financially independent.through their harvesting record
               </p>
           </div>
       </div>
@@ -93,14 +95,20 @@
             <div class="w-3/6">
             <h2 class="text-2xl font-bold">working system</h2>
             <hr>
-          <p class="text-gray  text-xl">Founding members shall be committed to 
-            actively participate to the organization’s activities. 
-            They attend the General Assembly meetings and have rights to vote. 
-            They are required to pay monthly and voluntary
-             contribution agreed by the General Assembly.</p>
+          <p class="text-gray  text-xl">we are the interaction between 
+            farmers and their customers 
+            especiallyfarmers who works in 
+            the cooperatives as we helpingthem 
+            to get direct notification on their phones 
+            after bringing their harvesting
+          to the companies who buy from them .
+           not only interacting between farmers and their customers.
+           but also we will help them to get direct 
+           loan in time they want it through their phones depending 
+           on their harvesting quantity.</p>
           </div>
           <div class="w-3/6 px-4">
-           <img src="{% static 'image/rice.jpg' %}" height="100px">
+           <img src="image/rice.jpg" height="100px">
           </div>
       </div>
      
