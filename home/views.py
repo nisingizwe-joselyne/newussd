@@ -371,7 +371,8 @@ def digitalapp (request):
             response = 'CON you have succesfully paid the loan thanks: \n'   
         elif text == '4*3':
             response = 'CON Other services: \n'
-            response += '1.how to become our platform user \n'
+            response += '1.how to become our plat
+            form user \n'
             response += '2.how to get loan \n'
         elif text == '4*3*1':
             response = 'END how to use our platform: \n'
