@@ -95,8 +95,16 @@
             </div>
           </div>
           
-          <a href="{% url 'register' %}">Registration</a>
-          
+        <a href="{% url 'register' %}">Registration</a>
+
+         <!-- {% if user.is_authenticated %}
+         <li>hello {{user.firstname}}</li><br>
+         <a href="accounts/logout">logout</a><br>
+         {% else %} 
+         <a href="accounts/regist">Regist</a><br>
+         <a href="accounts/login">login</a>
+           {% endif %}
+          -->
         </div>
         </div>
 

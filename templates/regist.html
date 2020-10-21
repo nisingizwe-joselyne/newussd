@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<body>
+    <div class="row p-4">
+        <div class="w-1/2 bg-pink-400">
+        <form action="register" method="POST">
+            {%csrf_token %}
+            <input type="text"  name="first_name" placeholder="first name"><br>
+            <input type="text"  name="last_name" placeholder="last name"><br>
+            <input type="text"  name="user_name" placeholder="user name"><br>
+            <input type="email"  name="email" placeholder="email"><br>
+            <input type="password"  name="password1" placeholder="password"><br>
+            <input type="password"  name="password2" placeholder=" confirm password"><br>
+             <input type="submit">
+        </form>
+         {% for message in messages %}
+        <p class="alert alert-warning">{{message}}</p>
+        {% endfor %}
+        </div>
+        <div  class="w-1/2 bg-gray-400">
+            <table>
+                <tr><td>id</td><td>name</td><td>email</td><td>phone</td><td>Delete</td><td>Update</td></tr>
+                {% for y in data %}
+                <tr><td>{{ y.id }}</td><td>{{ y.names }}</td><td>{{ y.email }}</td><td>{{ y.phone }}</td>
+              <td><a href="{% url 'deleteInfos' id=y.id  %}"><span class="btn btn-danger">Delete</span></a></td>
+              <td><a href="{% url 'updateInfos' id=y.id  %}"><span class="btn btn-info">Update</span></a></td>
+             
+             </tr>
+                {% endfor%}
+         </table>
+        </div>
+    </div>
+</body>
+</html>
