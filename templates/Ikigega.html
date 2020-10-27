@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> ikigega system</title>
-    <link rel="icon" type="icon/jpg"  href="image/rice.jpg" >
+    <link rel="icon" type="icon/jpg"  href="{% static 'image/rice.jpg' %}" >
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- UIkit CSS -->
@@ -47,7 +48,7 @@
       <br>
       <div class="flex">
         <div class="w-1/2">
-        <img src="image/farmers all.jpg" class="border-solid border-purple border-4 rounded-lg"
+        <img src="{% static 'image/farmers all.jpg' %}" class="border-solid border-purple border-4 rounded-lg"
         data-aos="fade-down"
         data-aos-easing="linear">
         <h2></h2>
@@ -72,9 +73,13 @@
 
                <span class="font-bold text-purple-500"> we help farmers to store their harvesting data</span> 
                <span class="font-bold text-black-300">  in digital way as well as helping them to get direct 
-                loan on their phones</span>
+                loan on their phones</span> in three categories :
+                Firstly we help them to get their harvesting record directly on their phone
+                secondly our technology will help them to get direct loan on their phone
+               depending on their harvesting quantity
+               lastly we will help them to get their harvesting insurance.to help them to recover .
             </p>
-         <div class="px-4"> <img src="image/phone.jpg"></div>
+         <div class="px-4"> <img src="{% static 'image/phone.jpg' %}"></div>
         </div>
       </div>
       <br>
@@ -108,7 +113,7 @@
            on their harvesting quantity.</p>
           </div>
           <div class="w-3/6 px-4">
-           <img src="image/rice.jpg" height="100px">
+           <img src="{% static 'image/rice.jpg' %}" height="100px">
           </div>
       </div>
      

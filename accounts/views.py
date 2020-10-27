@@ -22,7 +22,7 @@ def login(request):
 def regist(request):
     if request.method == 'POST':
         first_name = request.POST['first name']
-        lastname = request.POST['lastname']
+        lastname = request.POST['last name']
         username = request.POST['username']
         email = request.POST['email']
         password1 = request.POST['password1']
@@ -42,7 +42,7 @@ def regist(request):
                return redirect('login')
         else:
            messages.info(request,'password not matching')
-        return redirect('/')
+           return redirect('/')
     else:
         return render(request,'regist.html')
 def logout(request):
