@@ -146,7 +146,7 @@ def digitalapp (request):
             response = 'CON Enter the money you want: \n'
             w = input()
         elif numb == '1*2*1' and int(len(level))==6 and str(level[5]) in str(level):
-            response = 'CON  you have required to get' + w + 'rwf loan Enter mobile money pin code to confirm that will be paid in 2 months: \n'
+            response = 'CON  you have required to get rwf loan Enter mobile money pin code to confirm that will be paid in 2 months: \n'
         elif text == '1*2*2':
             response = 'CON Enter farmers code '+str(len(level))+' \n'
         elif numb == '1*2*2' and int(len(level))==4 and str(level[3]) in str(level):
@@ -161,7 +161,7 @@ def digitalapp (request):
             response += '2.join crops insurance \n'
         elif text == '1*3*1':
             response = 'END how to get crops insurance: \n'
-            response += 'in order to get crops insorance you have to be an active member of any registrated cooperative in our system \n'
+            response += 'in order to get crops insurance you have to be an active member of any registrated cooperative in our system \n'
         elif text == '1*3*2':
             response = 'END you have to be a user of our platform atleast 4 month before getting the insurance '
             # 2nd session milk
