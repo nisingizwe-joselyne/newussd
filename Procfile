@@ -1,1 +1,1 @@
-web: gunicorn YIDHO.wsgi --log-file - 
+web: gunicorn YIDHOpy.wsgi --log-file - 
