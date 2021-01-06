@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+      <div class="flex">
+        <div class="w-1/2">
+        <img src="{% static 'image/scrnsht.JPG' %}" class="border-solid border-purple border-4 rounded-lg"
+        >
+        <h2></h2>
+        </div>
+        <div class="w-1/2">
+          <h1 class="text-black text-2xl px-4 font-bold">YOUTH INITIATIVES FOR DEVELOPMENT AND HUMAN RIGHTS (YiDHO)</h1>
+          <hr>
+          <div class="dropdown px-4">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              categories
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Founding members</a>
+              <a class="dropdown-item" href="#">Adherent members</a>
+              <a class="dropdown-item" href="#">Honorary members</a>
+            </div>
+          </div>
+          <h2 class="px-4">OUR vision</h2>
+            <p class="text-xl px-4 ">
+
+               <span class="font-bold text-purple-500">We envision to have youth advocates of</span> 
+               <span class="font-bold text-black-300">human rights and peaceful development.</span>
+            </p>
+         <div class="px-4"> <img src="{% static 'image/Annotation.JPG' %}" data-aos="fade-down"
+          data-aos-easing="linear"></div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+          <div>
+            
+              <p class="text-sm">The General Assembly is convened and headed 
+                by the President of executive Committee. In his/her absence 
+                he/she shall temporarily be replaced by the Vice President. 
+                If both of them are absent or unwilling, the general Assembly 
+                shall be convened in written invitation signed by ½ of the 
+                effective members and designate 
+                a chairperson and reporter of the meeting. 
+              </p>
+          </div>
+      </div>
+      <br>
+          <div class="row px-4 bg-green-300">
+            <div class="w-3/6">
+            <h2 class="text-2xl font-bold">working system</h2>
+            <hr>
+          <p class="text-gray  text-xl">Founding members shall be committed to 
+            actively participate to the organization’s activities. 
+            They attend the General Assembly meetings and have rights to vote. 
+            They are required to pay monthly and voluntary
+             contribution agreed by the General Assembly.</p>
+          </div>
+          <div class="w-3/6 px-4">
+           <img src="{% static 'image/farmers all.jpg' %}" height="100px">
+          </div>
+      </div>
+     
+    </div>
+    <br>
+    <br>
+    <div class="bg-black px-4">
+      <h3 class="text-purple text-2xl text-bold text-center">Follow us for more update</h3>
+   <div class="flex  ">
+   
+     <div class="col-3 py-4 ">
+      <a href="" class="uk-icon-button" uk-icon="twitter"></a>
+     </div>
+     <div class="col-3 py-4">
+      <a href="" class="uk-icon-button" uk-icon="facebook"></a>
+     </div>
+     <div class="col-3 py-4">
+      <a href="" class="uk-icon-button" uk-icon="instagram"></a>
+     </div>
+     <div class="col-3 py-4">
+      <a href="" class="uk-icon-button" uk-icon="google"></a>
+     </div>
+   </div>
+    </div>
+   {% endblock %} 
