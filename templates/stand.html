@@ -3,276 +3,183 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>STAND FOR THEM</title>
-    <link rel="stylesheet" href="css/style">
-    <link rel="icon" type="icon/jpg"  href="{% static 'image/STAND LOGO.png' %}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YIDHO</title>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.6/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- UIkit C\SS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/css/uikit.min.css" />
+
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/js/uikit-icons.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body class="bg-gray-600">
-      <!-- Navigation -->
-  <header>
-    
-    <style>
-    
-     .navbar .navbar-brand img {
-      height: 40px;
-    }
-
-    .navbar .navbar-brand {
-      padding-top: 0;
-    }
-
-    .navbar .nav-link {
-      color: #444343!important;
-    }
-
-    .navbar .button-collapse {
-      padding-top: 0px;
-    }
-
-    
-    .card-intro .card-body h1 {
-      margin-bottom: 0;
-    }
-
-    .card-intro {
-      margin-top: 64px;
-    }
-
-
-   
-    </style>
-
-    <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light scrolling-navbar mb-0">
-      <div class="container-fluid bg-pink-200">
-
-        <!-- Brand -->
-        <a class="navbar-brand waves-effect" href="https://mdbootstrap.com/docs/jquery/" >
-          <img src="{% static 'image/STAND LOGO.png' %}" class="rounde-lg"  alt="Logo">
-        </a>
-
-        <!-- Collapse -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<body>
+    <div class=" container bg-pink-200 p-4">
+    <nav class="navbar  bg-gray-500">
+        <a class="navbar-brand w-1/6 text-black-300" href="#">YIDHO</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+      
+        <div class="flex gap-6 w-4/6" >
+          <ul style="list-style: none;" class="flex gap-4">
+            <li >
+              <a href="{% url 'home' %}" class="text-black-300">Home</a>
+            </li>
+            <li >
+              <a href="{% url 'about' %}" class="text-black-300">about us</a>
+            </li>
 
-        <!-- Links -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-          <!-- Left -->
-          <!-- Example single danger button -->
-<div class="btn-group">
-  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    home
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="#">home</a>
-    <a class="dropdown-item" href="www.about.com"> About </a>
-    <a class="dropdown-item" href="#">our services</a>
-    <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#">become our partner</a>
-  </div>
-</div>
- 
-          <!-- Right -->
- <div class="btn-group">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-               D.IKIGEGA
+          </ul>
+          <form class="form-inline px-20 ">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0 rounded-full" type="submit">Search</button>
+          </form>
+        </div>
+        </nav>
+      <div class="flex">
+        <div class="w-1/2">
+        <img src="{% static 'image/scrnsht.JPG' %}" class="border-solid border-purple border-4 rounded-lg"
+        >
+        <h2></h2>
+        </div>
+        <div class="w-1/2">
+          <h1 class="text-black text-2xl px-4 font-bold">YOUTH INITIATIVES FOR DEVELOPMENT AND HUMAN RIGHTS (YiDHO)</h1>
+          <hr>
+          <div class="dropdown px-4">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              categories
             </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="{% url 'ikigega' %}">Ikigega</a>
-              <a class="dropdown-item" href="www.financial.com">Financial services</a>
-              <a class="dropdown-item" href="#">Harvesting insurance</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">become our system user</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Founding members</a>
+              <a class="dropdown-item" href="#">Adherent members</a>
+              <a class="dropdown-item" href="#">Honorary members</a>
             </div>
           </div>
-          
-        <a href="{% url 'register' %}">Registration</a>
+          <h2 class="px-4">OUR vision</h2>
+            <p class="text-xl px-4 ">
 
-        <!-- {% if user.is_authenticated %}
-         <li>hello {{user.firstname}}</li><br>
-         <a href="accounts/logout">logout</a><br>
-         {% else %} 
-         <a href="accounts/regist">Regist</a><br>
-         <a href="accounts/login">login</a>
-           {% endif %}
-          -- -->
-        </div>
-        </div>
-
-      </div>
-    </nav>
-    <!-- Navbar -->
-
-    <!-- Intro -->
-    <div class="container-fluid">
-    <div class="card card-intro bg-blue-400 ">
-
-      <div class="card-body white-text rgba-black-light text-center">
-
-        <!--Grid row-->
-        <div class="row d-flex justify-content-center">
-
-          <!--Grid column-->
-          <div class="col-md-6">
-
-            <p class="h5 mb-2">
-              Welcome to Stand for Them Website
+               <span class="font-bold text-purple-500">We envision to have youth advocates of</span> 
+               <span class="font-bold text-black-300">human rights and peaceful development.</span>
             </p>
-
-            <p class="mb-0">Which stand for the most vulnerable people in our society
-                by developing technological solution to them.</p>
-
-          </div>
-          <!--Grid column-->
-
+         <div class="px-4"> <img src="{% static 'image/Annotation.JPG' %}" data-aos="fade-down"
+          data-aos-easing="linear"></div>
         </div>
-        <!--Grid row-->
-
       </div>
-
+      <br>
+      <div class="row">
+          <div>
+            
+              <p class="text-sm">The General Assembly is convened and headed 
+                by the President of executive Committee. In his/her absence 
+                he/she shall temporarily be replaced by the Vice President. 
+                If both of them are absent or unwilling, the general Assembly 
+                shall be convened in written invitation signed by ½ of the 
+                effective members and designate 
+                a chairperson and reporter of the meeting. 
+              </p>
+          </div>
+      </div>
+      <br>
+          <div class="row px-4 bg-green-300">
+            <div class="w-3/6">
+            <h2 class="text-2xl font-bold">working system</h2>
+            <hr>
+          <p class="text-gray  text-xl">Founding members shall be committed to 
+            actively participate to the organization’s activities. 
+            They attend the General Assembly meetings and have rights to vote. 
+            They are required to pay monthly and voluntary
+             contribution agreed by the General Assembly.</p>
+          </div>
+          <div class="w-3/6 px-4">
+           <img src="{% static 'image/farmers all.jpg' %}" height="100px">
+          </div>
+      </div>
+     
     </div>
-    <!-- Intro -->
-
-  </div>
-
-  </header>
-  <!-- Navigation -->
-<div class="container-fluid p-6">  
- <div class="row ">
-     <div class="col-6 ">
-      <div class=" w-full  uk-card uk-card-default uk-card-body bg-gray-400 rounded-lg">
-        <h3 class="uk-card-title">our vision</h3>
-        <p class="p-2">Bringing  <a href="#">inclusivity</a> in our society
-        by making sure that everyone is able to access needed services
-        in everyday life
-        </p>
-        <h3 class="uk-card-title">our mission</h3>
-        <p  class="p-2">Building technological solution that is respond to the need of 
-          the most vulnerable people in our society</p>
-    </div>
-  </div>
-  <div class="col-6">
-    <img src="{% static 'image/women inICT.jpg' %}" height="50px" class="w-full border-solid border-4 border-green rounde-lg">
-    
+    <br>
+    <br>
+    <div class="bg-black px-4">
+      <h3 class="text-purple text-2xl text-bold text-center">Follow us for more update</h3>
+   <div class="flex  ">
+   
+     <div class="col-3 py-4 ">
+      <a href="" class="uk-icon-button" uk-icon="twitter"></a>
+     </div>
+     <div class="col-3 py-4">
+      <a href="" class="uk-icon-button" uk-icon="facebook"></a>
+     </div>
+     <div class="col-3 py-4">
+      <a href="" class="uk-icon-button" uk-icon="instagram"></a>
+     </div>
+     <div class="col-3 py-4">
+      <a href="" class="uk-icon-button" uk-icon="google"></a>
+     </div>
    </div>
- </div>
- <div class="row p-8 flex">
-    <div class="col-4 ">
-      <img src="{% static 'image/rural girls.jpg' %}" class="rounded-lg  bg-white" data-aos="zoom-out-down">
-      <p class="text-xl text-bold">Rural girls in ICT</p>
-      </div>
-      <div class="col-4 ">
-       <img src="{% static 'image/wfp-629x420.jpg' %}" class="rounded-lg bg-white" data-aos="zoom-out-down">
-        <p class="text-xl text-bold">agriculture solutions</p>
-      </div>
-      <div class="col-4 "> 
-        <img src="{% static 'image/disabled-people.jpg' %}" class="rounded-lg  bg-white" data-aos="zoom-out-down">
-        <p class="text-xl text-bold">disabled-people</p>
-      </div>
-  
- </div>
- <div class="row">
-<div class="col-6" data-aos="zoom-out-down">
-  <p>we believe that every people deserve good 
-    and have the right to access any services as 
-    they want .
-    we want to empower women and more
-    girls in ICT especially those who live in rural
-    area .some of them after finishing their studies
-    they lack what to do they don't even have the basics 
-    skills in programing and computer maintenance.
-    therewason why we have come up with the program
-  </p>
-  <br>
-  <p>we want to empower women and more
-    girls in ICT especially those who live in rural
-    area .some of them after finishing their studies
-    they lack what to do they don't even have the basics 
-    skills in programing and computer maintenance.
-    therewason why we have come up with the program 
-  </p>
-</div>
-<div class="col-6">
-  <img src="{% static 'image/STAND LOGO.png' %}" height="50px" class="border-solid border-4 border-blue rounde-lg" 
-  data-aos="fade-up"
-  data-aos-duration="3000">
-</div>
- </div>
-</div>
-  
+    </div>
+   
 <!-- Footer -->
-<footer class="page-footer font-small special-color-dark pt-4">
+<footer class="page-footer font-small cyan darken-3">
  
   <!-- Footer Elements -->
   <div class="container">
 
-    <!--Grid row-->
+    <!-- Grid row-->
     <div class="row">
 
-      <!--Grid column-->
-      <div class="col-md-6 mb-4">
+      <!-- Grid column -->
+      <div class="col-md-12 py-5">
+        <div class="mb-5 flex-center">
 
-        <!-- Form -->
-        <form class="form-inline">
-          <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
-            aria-label="Search">
-          <i class="fas fa-search" aria-hidden="true"></i>
-        </form>
-        <!-- Form -->
-
+          <!-- Facebook -->
+          <a class="fb-ic">
+            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic">
+            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic">
+            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic">
+            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic">
+            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Pinterest-->
+          <a class="pin-ic">
+            <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+          </a>
+        </div>
       </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-md-6 mb-4">
-
-        <form class="input-group">
-          <input type="text" class="form-control form-control-sm" placeholder="Your email"
-            aria-label="Your email" aria-describedby="basic-addon2">
-          <div class="input-group-append">
-            <button class="btn btn-sm btn-outline-white my-0" type="button">Sign up</button>
-          </div>
-        </form>
-
-      </div>
-      <!--Grid column-->
+      <!-- Grid column -->
 
     </div>
-    <!--Grid row-->
+    <!-- Grid row-->
 
   </div>
   <!-- Footer Elements -->
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/education/bootstrap/"> join us to learn more</a>
+    <a href="https://mdbootstrap.com/education/bootstrap/"> YIDHO.com</a>
   </div>
   <!-- Copyright -->
 
 </footer>
 <!-- Footer -->
-    
 
-   
-<!-- boostrap js -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-<!-- uikit js -->
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.6/dist/js/uikit-icons.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.5.6/dist/js/uikit.min.js"></script>
-<!-- aos js -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();
