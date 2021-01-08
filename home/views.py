@@ -98,7 +98,7 @@ def digitalapp (request):
         response = ''
         numb = text[:5]
         if text == '':
-            response = 'CON welcome to  digital ikigega platform for farmers: \n'
+            response = 'CON welcome to Smart ikigega platform for farmers: \n'
             response += '1. rice \n'
             response += '2. milk \n'
             response += '3.coffee \n'
@@ -107,7 +107,7 @@ def digitalapp (request):
             response += '6.fruits'
             #  harvesting session
         elif text == '1':
-            response = 'CON welcome to  digital ikigega platform for farmers '+str(len(level))+'\n'
+            response = 'CON welcome to  Smart ikigega platform for  rice farmers '+str(len(level))+'\n'
             response += '1. Harvesting services \n'
             response += '2. financial service \n'
             response += '3. Insurance services'
@@ -144,7 +144,7 @@ def digitalapp (request):
             response += '4.dierect loan of 12 months/allowed loan (120000rwf)\n'
         elif numb == '1*2*1' and int(len(level))==5 and str(level[4]) in str(level):
             response = 'CON Enter the money you want: \n'
-            w = input()
+            
         elif numb == '1*2*1' and int(len(level))==6 and str(level[5]) in str(level):
             response = 'CON  you have required to get rwf loan Enter mobile money pin code to confirm that will be paid in 2 months: \n'
         elif text == '1*2*2':
@@ -163,10 +163,10 @@ def digitalapp (request):
             response = 'END how to get crops insurance: \n'
             response += 'in order to get crops insurance you have to be an active member of any registrated cooperative in our system \n'
         elif text == '1*3*2':
-            response = 'END you have to be a user of our platform atleast 4 month before getting the insurance '
+            response = 'END  enter the farmers code to get the insurance:'
             # 2nd session milk
         elif text == '2':
-            response = 'CON welcome to  digital ikigega platform for farmers '+str(len(level))+'\n'
+            response = 'CON welcome to  Smart ikigega platform for milk owner '+str(len(level))+'\n'
             response += '1. Harvesting services \n'
             response += '2. financial service \n'
             response += '3.insurance services '
