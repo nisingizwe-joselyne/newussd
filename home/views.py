@@ -116,13 +116,13 @@ def digitalapp (request):
             response = 'CON  harvesting checking : \n'
             response += '1.current total harvesting \n'
             response += '2.currently monthly harvesting \n'
-        elif text == '1*1*1':
-            response = 'CON Enter farmers code or phone number \n'
-        elif numb == '1*1*1' and int(len(level))==4 and str(level[3]) in str(level):
-            response = 'CON your current total  harvesting is \n'
-            response += '1.july:215kg \n'
-            response += '2.august:260kg \n'
-            response += '3.sept:60kg '
+       elif text == '1*1*1':
+            response = 'CON injizamo code yumuhinzi  \n'
+            y = input
+            y =request.POST['farmercode']
+            v=Harvestrecord.objects.filter(farmercode=y)
+            for rt in v:
+                qty = rt.Quantity
         elif text == '1*1*2':
             response = 'CON Enter  farmers code or phone number \n'
         elif numb == '1*1*2'and int(len(level))==4 and str(level[3]) in str(level):
