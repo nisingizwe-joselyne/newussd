@@ -115,7 +115,7 @@ def digitalapp (request):
         elif text == '1*1':
             response = 'CON  harvesting checking : \n'
             response += '1.current total harvesting \n'
-            response += '2.currently monthly harvesting \n'
+            response += '2.currently monthly harvesting'
         elif text == '1*1*1':
             response = 'CON injizamo code yumuhinzi  \n'
             y = input
