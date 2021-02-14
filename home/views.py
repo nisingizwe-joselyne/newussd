@@ -118,15 +118,15 @@ def digitalapp (request):
             response += '2.currently monthly harvesting'
         elif text == '1*1*1':
             response = 'CON injizamo code yumuhinzi '+str(len(level))+ '\n'
-            y = input
-            y =request.POST['farmercode']
-            v=Harvestrecord.objects.filter(farmercode=y)
-            for rt in v:
-                qty = rt.Quantity
+#             y = input
+#             y =request.POST['farmercode']
+#             v=Harvestrecord.objects.filter(farmercode=y)
+#             for rt in v:
+#                 qty = rt.Quantity
         elif numb == '1*1*1' and int(len(level))==4 and str(level[3]) in str(level):
-            response = 'CON umusaruro mbumbe wawe ni' + qty + ' \n'
+            response = 'CON umusaruro mbumbe wawe ni 260kg' \n'
         elif text == '1*1*2':
-            response = 'CON Enter  farmers code or phone number \n'
+            response = 'CON Enter  farmers code or phone number'+str(len(level))+ ' \n'
         elif numb == '1*1*2'and int(len(level))==4 and str(level[3]) in str(level):
             response = 'CON your monthly current harvesting is 140kg \n'
         #  financial session
