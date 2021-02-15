@@ -17,7 +17,7 @@ class Harvesting(models.Model):
     def __str__(self):
         return self.location
 class Harvestrecord(models.Model):
-    usered=models.ForeignKey(Regfarmer, on_delete=models.CASCADE)
+    usered=models.ForeignKey(Farmers, on_delete=models.CASCADE)
     Quantity=models.CharField(max_length=255)
     farmercode=models.CharField(max_length=255)
     donedate=models.DateField(auto_now=True)
