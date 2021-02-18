@@ -110,7 +110,7 @@ def digitalapp (request):
             response += '2.momo isanzwe'
             # current harvesting session
         elif text == '1*1':
-           response = 'CON shyiramo code yumuhinzi :' +str(len(level))+ ' \n' 
+           response = 'CON shyiramo code yumuhinzi '+str(len(level))+' \n' 
 #         elif text == '1*1*1':
 #             response = 'CON injizamo code yumuhinzi '+str(len(level))+ '\n'
 # #             y = input
