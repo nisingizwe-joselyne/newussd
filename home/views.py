@@ -98,24 +98,19 @@ def digitalapp (request):
         response = ''
         numb = text[:5]
         if text == '':
-            response = 'CON welcome to Smart ikigega platform for farmers: \n'
-            response += '1. rice \n'
-            response += '2. milk \n'
-            response += '3.coffee \n'
-            response += '4.Wheat \n'
-            response += '5.Maize \n'
-            response += '6.fruits'
+            response = 'CON murakaza neza kurubuga rwabahinzi Smart ikigega \n'
+            response += '1.ikigega pay \n'
+            response += '2.umusaruro wanjye\n'
+            response += '3.kwiyandikisha mukigega \n'
+            response += '4.kubarura umusaruro '
             #  harvesting session
         elif text == '1':
-            response = 'CON welcome to  Smart ikigega platform for  rice farmers '+str(len(level))+'\n'
-            response += '1. Harvesting services \n'
-            response += '2. financial service \n'
-            response += '3. Insurance services'
+            response = 'CON kwishyura \n'
+            response += '1.uri mukigega \n'
+            response += '2.momo isanzwe'
             # current harvesting session
         elif text == '1*1':
-            response = 'CON  harvesting checking : \n'
-            response += '1.current total harvesting \n'
-            response += '2.currently monthly harvesting'
+           response = 'CON shyiramo code yumuhinzi :' +str(len(level))+ ' \n' 
 #         elif text == '1*1*1':
 #             response = 'CON injizamo code yumuhinzi '+str(len(level))+ '\n'
 # #             y = input
@@ -125,6 +120,12 @@ def digitalapp (request):
 # #                 qty = rt.Quantity
 #         elif numb == '1*1*1' and int(len(level))==4 and str(level[3]) in str(level):
 #             response = 'CON umusaruro mbumbe wawe ni 260kg' \n'
+        elif numb == '1*1' and int(len(level))==3 and str(level[2]) in str(level):
+            response = 'CON shyiramo ingano yumusaruro mu biro cg litiro \n'
+        elif numb == '1*1' and int(len(level))==4 and str(level[3]) in str(level):
+            response = 'CON shyiramo amafaranga ugiye kwishyura \n'
+        elif numb == '1*1' and int(len(level))==5 and str(level[4]) in str(level):
+            response = 'CON  wahisemo kwishyura'+ str(level[4]) + 'ugiye kwishyura kuri' + str(level[2]) +'shyiramo umubare wibanga wemeze kwishyura  \n'    
         elif text == '1*1*2':
             response = 'CON Enter  farmers code or phone number'+str(len(level))+ ' \n'
         elif numb == '1*1*2'and int(len(level))==4 and str(level[3]) in str(level):
