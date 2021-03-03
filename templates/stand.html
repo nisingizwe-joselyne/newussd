@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YIDHO</title>
+    <title> stand for them</title>
+    <link rel="icon" type="icon/jpg"  href="{% static 'image/STAND LOGO.png' %}" >
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <!-- UIkit C\SS -->
+    <!-- UIkit CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/css/uikit.min.css" />
 
 <!-- UIkit JS -->
@@ -19,170 +20,325 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
-    <div class=" container bg-pink-200 p-4">
-    <nav class="navbar  bg-gray-500">
-        <a class="navbar-brand w-1/6 text-black-300" href="#">YIDHO</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="flex gap-6 w-4/6" >
-          <ul style="list-style: none;" class="flex gap-4">
-            <li >
-              <a href="{% url 'stand' %}" class="text-black-300">Home</a>
-            </li>
-            <li >
-              <a href="{% url 'about' %}" class="text-black-300">about us</a>
-            </li>
+<body style="background-image:radial-gradient(circle, rgb(170, 221, 250), rgb(198, 243, 232), rgb(248, 225, 250));">
+    <!-- This example requires Tailwind CSS v2.0+ -->
+  
+<!-- navbar -->
+<div class="bg-white">
+  <!-- <img class="w-full md-1/4" src="{% static 'image/STAND LOGO.png' %}" height="30px" width="30px"> -->
+<!-- <div class="w-full md-3/4"> -->
+  <!-- <ul> <img src="{% static 'image/STAND LOGO.png' %}" height="30px" width="30px"></ul> -->
+  <ul class="nav justify-content-center">
+    
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="/">HOME</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'work' %}">ABOUT US</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">SERVICES</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " href="{% url 'cooperative' %}" tabindex="-1" aria-disabled="true">PARTNERS</a>
+  </li>
+  <!-- <li class="nav-item">
+    <img src="{% static 'image/STAND LOGO.png' %}">
+  </li> -->
+</ul>
+<!-- </div> -->
+</div>
 
-          </ul>
-          <form class="form-inline px-20 ">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0 rounded-full" type="submit">Search</button>
-          </form>
-        </div>
-        </nav>
-      <div class="flex">
-        <div class="w-1/2">
-        <img src="{% static 'image/scrnsht.JPG' %}" class="border-solid border-purple border-4 rounded-lg"
-        >
-        <h2></h2>
-        </div>
-        <div class="w-1/2">
-          <h1 class="text-black text-2xl px-4 font-bold">YOUTH INITIATIVES FOR DEVELOPMENT AND HUMAN RIGHTS (YiDHO)</h1>
-          <hr>
-          <div class="dropdown px-4">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              categories
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Founding members</a>
-              <a class="dropdown-item" href="#">Adherent members</a>
-              <a class="dropdown-item" href="#">Honorary members</a>
+<!-- end nav -->
+
+
+    <!--Main Navigation-->
+    <header>
+      <style>
+        /* Carousel styling */
+        #introCarousel,
+        .carousel-inner,
+        .carousel-item,
+        .carousel-item.active {
+          height: 100vh;
+        }
+
+        .carousel-item:nth-child(1) {
+          background-image: url("{% static 'image/STAND LOGO.png' %}");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
+        }
+        .carousel-item:nth-child(2) {
+          background-image: url("{% static 'image/STAND LOGO.png' %}");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
+        }
+        .carousel-item:nth-child(3) {
+          background-image: url("{% static 'image/STAND LOGO.png' %}");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
+        }
+
+        /* Height for devices larger than 576px */
+        @media (min-width: 992px) {
+          #introCarousel {
+            margin-top: -58.59px;
+          }
+          #introCarousel,
+          .carousel-inner,
+          .carousel-item,
+          .carousel-item.active {
+            height: 50vh;
+          }
+        }
+
+        .navbar .nav-link {
+          color: #fff !important;
+        }
+      </style>
+      <!-- Carousel wrapper -->
+    </header>
+    <!--Main Navigation-->
+
+    <!--Main layout-->
+    <main class="mt-5">
+      <div class="container">
+        <!--Section: Content-->
+        <section>
+          <div class="row">
+            <div class="col-md-6 gx-5 mb-4">
+              <div class="bg-image hover-overlay ripple shadow-2-strong" data-mdb-ripple-color="light">
+                <img src="{% static 'image/STAND LOGO.png' %}" height="80%" width="70%" class="img-fluid" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 gx-5 mb-4 shadow-2-strong">
+              <h4 class="py-10"><strong> our mission</strong></h4>
+              <p class=" text-muted">
+               Building the society that have  inclusivity 
+               for everyone in every sector using 
+               innovative solution through technology
+              </p>
+              <p><strong>Vision</strong></p>
+              <p class="text-muted">
+               Become the center of inclusive technology that
+               left left none behind in our society
+              </p>
             </div>
           </div>
-          <h2 class="px-4">OUR vision</h2>
-            <p class="text-xl px-4 ">
+        </section>
+        <!--Section: Content-->
 
-               <span class="font-bold text-purple-500">We envision to have youth advocates of</span> 
-               <span class="font-bold text-black-300">human rights and peaceful development.</span>
-            </p>
-         <div class="px-4"> <img src="{% static 'image/Annotation.JPG' %}" data-aos="fade-down"
-          data-aos-easing="linear"></div>
-        </div>
-      </div>
-      <br>
-      <div class="row">
-          <div>
-            
-              <p class="text-sm">The General Assembly is convened and headed 
-                by the President of executive Committee. In his/her absence 
-                he/she shall temporarily be replaced by the Vice President. 
-                If both of them are absent or unwilling, the general Assembly 
-                shall be convened in written invitation signed by ½ of the 
-                effective members and designate 
-                a chairperson and reporter of the meeting. 
-              </p>
+        <hr class="my-5" />
+
+        <!--Section: Content-->
+        <section class="text-center">
+          <h4 class="mb-5 "><strong>Some of our inclusive technology</strong></h4>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div class="card">
+                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                  <img
+                    src="https://mdbootstrap.com/img/new/standard/nature/184.jpg"
+                    class="img-fluid"
+                  />
+                  <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title text-indigo-500">SMART IKIGEGA SYSTEM</h5>
+                  <p class="card-text p-2 text-sm">
+                    This is the system that helps farmers to be inclusive in many 
+                    services digitally.with smart ikigega farmers are able  to 
+                    use cashless method and they are able to be identified with single 
+                    identity (farmercode) which helps them to acces other neccessary 
+                    services(bank &crop insurance) digitally beyond to that they are 
+                    able to access and record their harvesting data digital
+                     using USSD Portal.
+                  </p>
+                  <a href="#!" class="btn btn-primary">Learn More</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                  <img
+                    src="https://mdbootstrap.com/img/new/standard/nature/023.jpg"
+                    class="img-fluid"
+                  />
+                  <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title text-indigo-500 ">SMART TRANSPORT FOR ALL</h5>
+                  <p class="card-text p-2 text-sm">
+                with this system we are bringing the inclusivity of
+                visual and hearing impaired people in general transport.
+                we want to make sure that they are able to be independent 
+                in their journey while using general transport by getting sound and 
+                sign notification of every bus station that they are approaching 
+                this will helps them to feel comfortable while using general
+                transport like bus in our country.
+                  </p>
+                  <a href="#!" class="btn btn-primary">Learn More</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                  <img
+                    src="https://mdbootstrap.com/img/new/standard/nature/111.jpg"
+                    class="img-fluid"
+                  />
+                  <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title text-indigo-500">SEF education system</h5>
+                  <p class="card-text p-2 text-sm">
+                   with this technology we want that parent participate in the education 
+                   of their children through digital follow up system and trending notification 
+                   which will helps them to know what is going on with their student while they 
+                   are at school without calling and but through the system that will helpsthem to 
+                   know every single step that their children while at school and communicate well 
+                   with the school leader on that platform.
+                  </p>
+                  <a href="#!" class="btn btn-primary">Learn More</a>
+                </div>
+              </div>
+            </div>
           </div>
+        </section>
+        <!--Section: Content-->
+
+      
       </div>
-      <br>
-          <div class="row px-4 bg-green-300">
-            <div class="w-3/6">
-            <h2 class="text-2xl font-bold">working system</h2>
-            <hr>
-          <p class="text-gray  text-xl">Founding members shall be committed to 
-            actively participate to the organization’s activities. 
-            They attend the General Assembly meetings and have rights to vote. 
-            They are required to pay monthly and voluntary
-             contribution agreed by the General Assembly.</p>
-          </div>
-          <div class="w-3/6 px-4">
-           <img src="{% static 'image/farmers all.jpg' %}" height="100px">
-          </div>
-      </div>
+    </main>
+    <!--Main layout-->
+
+    <!--Footer-->
+
+    <!--Footer-->
+
+      <!-- Footer -->
+<!-- <div class="p-4">
+    <div class="container my-4">
+  
      
-    </div>
-    <br>
-    <br>
-    <div class="bg-black px-4">
-      <h3 class="text-purple text-2xl text-bold text-center">Follow us for more update</h3>
-   <div class="flex  ">
-   
-     <div class="col-3 py-4 ">
-      <a href="" class="uk-icon-button" uk-icon="twitter"></a>
-     </div>
-     <div class="col-3 py-4">
-      <a href="" class="uk-icon-button" uk-icon="facebook"></a>
-     </div>
-     <div class="col-3 py-4">
-      <a href="" class="uk-icon-button" uk-icon="instagram"></a>
-     </div>
-     <div class="col-3 py-4">
-      <a href="" class="uk-icon-button" uk-icon="google"></a>
-     </div>
-   </div>
-    </div>
-   
-<!-- Footer -->
-<footer class="page-footer font-small cyan darken-3">
- 
-  <!-- Footer Elements -->
-  <div class="container">
-
-    <!-- Grid row-->
-    <div class="row">
-
-      <!-- Grid column -->
-      <div class="col-md-12 py-5">
-        <div class="mb-5 flex-center">
-
-          <!-- Facebook -->
-          <a class="fb-ic">
-            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!-- Twitter -->
-          <a class="tw-ic">
-            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!-- Google +-->
-          <a class="gplus-ic">
-            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!--Linkedin -->
-          <a class="li-ic">
-            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!--Instagram-->
-          <a class="ins-ic">
-            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!--Pinterest-->
-          <a class="pin-ic">
-            <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
-          </a>
+      
+  <footer class="page-footer font-small blue pt-4">
+  
+    Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+  
+      <!-- Grid row -->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3 px-4">
+  
+          <!-- Content -->
+          <h5 class="text-uppercase">Location</h5>
+          <p >Kigali city-Gasabo-Remera.</p>
+          <p>Westerwelle House kigali</p>
         </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none pb-3">
+  
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+  
+          <!-- Links -->
+          <h5 class="text-uppercase">follow us</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="" class="uk-icon-button" uk-icon="twitter"></a>
+            </li>
+            <li>
+              <a href="" class="uk-icon-button" uk-icon="facebook"></a>
+            </li>
+            <li>
+              <a href="" class="uk-icon-button" uk-icon="linkedin"></a>
+            </li>
+            <li>
+              <a href="" class="uk-icon-button" uk-icon="instagram"></a>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+  
+          <!-- Links -->
+          <h5 class="text-uppercase">more infos</h5>
+  
+          <ul class="list-unstyled py-2">
+            <li>
+              <a href="#!">about us</a>
+            </li>
+            <li>
+              <a href="">home</a>
+            </li>
+            <li>
+              <a href="#!">contact us</a>
+            </li>
+            <li>
+              <a href="#!">services</a>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
       </div>
-      <!-- Grid column -->
-
+      <!-- Grid row -->
+  
     </div>
-    <!-- Grid row-->
-
+    <!-- Footer Links -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2021 Copyright:
+      <a href="https://mdbootstrap.com/education/bootstrap/">Stand for them</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer> 
+  <!-- Footer -->
+  
+    </div>
   </div>
-  <!-- Footer Elements -->
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/education/bootstrap/"> YIDHO.com</a>
-  </div>
-  <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-</body>
-</html>
+  
+  <!-- boostrap js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <!-- uikit js -->
+  <script src="uikit/dist/js/uikit-icons.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.6/dist/js/uikit-icons.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.6/dist/js/uikit.min.js"></script>
+  <!-- aos js -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+          AOS.init();
+      </script>
+  </body>
+  </html>
