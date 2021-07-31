@@ -32,7 +32,7 @@ class CustomAuthToken(ObtainAuthToken):
 
         })
 def welcome(request):
-    return render(request,'stand.html') 
+    return render(request,'indextwo.html') 
 def about(request):
     return render(request,'about.html')
 def Ikigega(request):
