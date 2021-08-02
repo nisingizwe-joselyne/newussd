@@ -15,7 +15,7 @@
 		<meta name="author" content="okler.net">
 
 		<!-- Favicon -->
-		<link rel="icon" type="icon/jpg"  href="{% static 'image/STAND LOGO.png' %}" >
+		<link rel="icon" type="icon/jpg' %}"  href="{% static 'image/STAND LOGO.png' %}" >
 		<!-- <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" /> -->
 		<link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
 
@@ -68,7 +68,7 @@
 							<div class="header-column">
 								<div class="header-row">
 									<div class="header-logo">
-										<a href="demo-church.html">
+										<a href="/">
 											<img alt="Porto" width="90" height="41" src="{% static 'image/STAND LOGO.png' %}">
 										</a>
 									</div>
@@ -86,7 +86,7 @@
 														</a>
 													</li>
 													<li class="dropdown dropdown-full-color dropdown-primary">
-														<a class="dropdown-item dropdown-toggle" href="#">
+														<a class="dropdown-item dropdown-toggle" href="{% url 'about' %}">
 															About Us
 														</a>
 													</li>
@@ -109,9 +109,276 @@
 				</div>
 			</header>
 
-
+<!-- about us content -->
           
+<div role="main" class="main">
+	<section class="page-header page-header-classic page-header-sm">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 order-2 order-md-1 align-self-center p-static">
+					<h1 data-title-border>About Us</h1>
+				</div>
+				<div class="col-md-4 order-1 order-md-2 align-self-center">
+					<ul class="breadcrumb d-block text-md-right">
+						<li><a href="/">Home</a></li>
+						<li class="active">Pages</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
 
+	<div class="container pb-1">
+
+		<div class="row pt-4">
+			<div class="col">
+				<div class="overflow-hidden mb-3">
+					<h2 class="word-rotator slide font-weight-bold text-8 mb-0 appear-animation" data-appear-animation="maskUp">
+						<span>The New Way to </span>
+						<span class="word-rotator-words bg-primary">
+							<b class="is-visible">inclusivity</b>
+							<b>in our </b>
+							<b>society</b>
+						</span>
+					</h2>
+				</div>
+			</div>
+		</div>
+
+		<div class="row mb-2">
+			<div class="col-lg-10">
+				<div class="overflow-hidden">
+					<p class="lead mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="250">
+						we are strongly motivated team and want to remove the obstacles that most vulnerable people in our
+						society are facing ,beyond to that we try to integrate our technology in all fields through innovation.
+					</p>
+				</div>
+			</div>
+			<div class="col-lg-2 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="450">
+				<a href="#" class="btn btn-modern btn-primary mt-1">Join Our Team!</a>
+			</div>
+		</div>
+	</div>
+	<section class="section section-default border-0 my-5 appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="750">
+		<div class="container py-4">
+
+			<div class="row align-items-center">
+				<div class="col-md-6 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="1000">
+					<div class="owl-carousel owl-theme nav-inside mb-0" data-plugin-options="{'items': 1, 'margin': 10, 'animateOut': 'fadeOut', 'autoplay': true, 'autoplayTimeout': 6000, 'loop': true}">
+						<div>
+							<img alt="" class="img-fluid" src="{ % static 'img/generic/generic-corporate-3-2-full.jpg' %}">
+						</div>
+						<div>
+							<img alt="" class="img-fluid" src="{ % static 'img/generic/generic-corporate-3-3-full.jpg' %}">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="overflow-hidden mb-2">
+						<h2 class="text-color-dark font-weight-normal text-5 mb-0 pt-0 mt-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="1200">Who <strong class="font-weight-extra-bold">We Are</strong></h2>
+					</div>
+					<p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1400">we are  <a href="/">stand for them</a> company created by two ladieas in 2019 with the aim of bringing an inclusive approach in technology.</p>
+					<p class="mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1600">it has been created after seeing  how the technology is advancing nowadays but they are some groups that being left behind due to different obstacles.</p>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<div class="container">
+
+		<div class="row mt-5 py-3">
+			<div class="col-md-6">
+				<div class="toggle toggle-primary toggle-simple m-0" data-plugin-toggle>
+					<section class="toggle active mt-0">
+						<label>Our Vision</label>
+						<div class="toggle-content">
+							<p><strong class="text-color-light">become an inclusive</strong></br> technology center</br> that left none behind.</p>
+						</div>
+					</section>
+					<section class="toggle">
+						<label>Our Mission</label>
+						<div class="toggle-content">
+							<p>building and bringing new technology.</br> that will be helping all the people to.</br> be inclusive in every sector .</p>
+						</div>
+					</section>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<!-- we can add a content here -->
+			</div>
+		</div>
+		<div class="row">
+			<div class="col py-4">
+				<hr class="solid">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8 mx-md-auto text-center">
+
+				<h2 class="text-color-dark font-weight-normal text-5 mb-0 pt-2">Our <strong class="font-weight-extra-bold">History</strong></h2>
+				<p>How we started,and the prograss that we are making in our journey.</p>
+
+				<section class="timeline" id="timeline">
+					<div class="timeline-body">
+						<div class="timeline-date">
+							<h3 class="text-primary font-weight-bold">2019</h3>
+						</div>
+
+						<article class="timeline-box left text-left appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="200">
+							<div class="timeline-box-arrow"></div>
+							<div class="p-2">
+								<img alt="" class="img-fluid" src="{ % static 'img/history/history-3.jpg' %}" />
+								<h3 class="font-weight-bold text-3 mt-3 mb-1">company creation</h3>
+								<p class="mb-0 text-2">In december  2019 is when stand for them has been<br/>
+									 created and been registred under goverment in RDB.</p>
+							</div>
+						</article>
+						<div class="timeline-date">
+							<h3 class="text-primary font-weight-bold">2021</h3>
+						</div>
+
+						<article class="timeline-box right text-left appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="400">
+							<div class="timeline-box-arrow"></div>
+							<div class="p-2">
+								<img alt="" class="img-fluid" src="{ % static 'img/history/history-2.jpg' %}" />
+								<h3 class="font-weight-bold text-3 mt-3 mb-1">2021</h3>
+								<p class="mb-0 text-2">our project called "smart ikigega" has been selected as the best projects in <br/>
+									the country in the "MTN yolo hackathon competition" and come into the first top3 projects to beawarded by MTN.</p>
+							</div>
+						</article>
+
+						<div class="timeline-date">
+							<h3 class="text-primary font-weight-bold">2020</h3>
+						</div>
+
+						<article class="timeline-box right text-left appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="400">
+							<div class="timeline-box-arrow"></div>
+							<div class="p-2">
+								<img alt="" class="img-fluid" src="{ % static 'img/history/history-2.jpg' %}" />
+								<h3 class="font-weight-bold text-3 mt-3 mb-1">2021</h3>
+								<p class="mb-0 text-2">we have been attended to attend one of the best startup incubation<br/>
+									program in Rwanda called "Entrepreneurship program for nine months" for Westerwelle startup house.</p>
+							</div>
+						</article>
+					</div>
+				</section>
+
+			</div>
+		</div>
+
+	</div>
+
+	<section class="section section-default border-0 my-5">
+		<div class="container py-4">
+
+			<div class="row">
+				<div class="col pb-4 text-center">
+					<h2 class="text-color-dark font-weight-normal text-5 mb-0 pt-2">Meet <strong class="font-weight-extra-bold">Our Team</strong></h2>
+					<p>we have a collaborative team which have the same goals of making change in our society through technology 
+						and our skills complement each other.</p>
+				</div>
+			</div>
+			<div class="row pb-4 mb-2">
+				
+				
+				<div class="col-sm-6 col-lg-3 mb-4 mb-sm-0 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="400">
+					<span class="thumb-info thumb-info-hide-wrapper-bg bg-transparent border-radius-0">
+						<span class="thumb-info-wrapper border-radius-0">
+							
+								<img src="{% static 'image/jojo.JPG' %}" class="img-fluid border-radius-0" alt="">
+								<span class="thumb-info-title">
+									<span class="thumb-info-inner">Joselyne Nisingizwe</span>
+									<span class="thumb-info-type">Developer/Co-founder</span>
+								</span>
+							
+						</span>
+						<span class="thumb-info-caption">
+							<span class="thumb-info-caption-text"></span>she is a software developer graduate from ida technology.
+								she is also one of the company founders and she has been working with the company in terms 
+								of bringing new innovations and as a software developer she works on projects developments.
+								 non suscipitaccumsan</span>
+							<span class="thumb-info-social-icons">
+								<a target="_blank" href="http://www.facebook.com"><i class="fab fa-facebook-f"></i><span>Facebook</span></a>
+								<a href="http://www.twitter.com"><i class="fab fa-twitter"></i><span>Twitter</span></a>
+								<a href="http://www.linkedin.com"><i class="fab fa-linkedin-in"></i><span>Linkedin</span></a>
+							</span>
+						</span>
+					</span>
+				</div>
+				<div class="col-sm-6 col-lg-3 mb-4 mb-lg-0 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="200">
+					<span class="thumb-info thumb-info-hide-wrapper-bg bg-transparent border-radius-0">
+						<span class="thumb-info-wrapper border-radius-0">
+							
+								<img src="{% static 'image/mutima.jpg' %}" class="img-fluid border-radius-0" alt="">
+								<span class="thumb-info-title">
+									<span class="thumb-info-inner">Josiane Karikumutima</span>
+									<span class="thumb-info-type">Managing Director/co-founder</span>
+								</span>
+							
+						</span>
+						<span class="thumb-info-caption">
+							<span class="thumb-info-caption-text">she is computer engineer graduate from kampala international university.
+								she also one of two founders and she is working with this company as quality
+								assurance and project manager of our projects</span>
+							<span class="thumb-info-social-icons">
+								<a target="_blank" href="http://www.facebook.com"><i class="fab fa-facebook-f"></i><span>Facebook</span></a>
+								<a href="http://www.twitter.com"><i class="fab fa-twitter"></i><span>Twitter</span></a>
+								<a href="http://www.linkedin.com"><i class="fab fa-linkedin-in"></i><span>Linkedin</span></a>
+							</span>
+						</span>
+					</span>
+				</div>
+				<div class="col-sm-6 col-lg-3 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="600">
+					<span class="thumb-info thumb-info-hide-wrapper-bg bg-transparent border-radius-0">
+						<span class="thumb-info-wrapper border-radius-0">
+							
+								<img src="{% static 'image/bosco.jpg' %}" class="img-fluid border-radius-0" alt="">
+								<span class="thumb-info-title">
+									<span class="thumb-info-inner">Yumvuhore j bosco</span>
+									<span class="thumb-info-type">Hardware engineer</span>
+								</span>
+							
+						</span>
+						<span class="thumb-info-caption">
+							<span class="thumb-info-caption-text">He is an electronic engineer Graduated from university of Rwanda.
+								 he also have been working in IOT and hardware programming for long time and he has developed many projects running outside</span>
+							<span class="thumb-info-social-icons">
+								<a target="_blank" href="http://www.facebook.com"><i class="fab fa-facebook-f"></i><span>Facebook</span></a>
+								<a href="http://www.twitter.com"><i class="fab fa-twitter"></i><span>Twitter</span></a>
+								<a href="http://www.linkedin.com"><i class="fab fa-linkedin-in"></i><span>Linkedin</span></a>
+							</span>
+						</span>
+					</span>
+				</div>
+				<div class="col-sm-6 col-lg-3 mb-4 mb-lg-0 appear-animation" data-appear-animation="fadeInRightShorter">
+					<span class="thumb-info thumb-info-hide-wrapper-bg bg-transparent border-radius-0">
+						<span class="thumb-info-wrapper border-radius-0">
+							
+								<img src="{% static 'image/doreen.jpg' %}" class="img-fluid border-radius-0" alt="">
+								<span class="thumb-info-title">
+									<span class="thumb-info-inner">Doreen Ingabire</span>
+									<span class="thumb-info-type">developer/public relation officer</span>
+								</span>
+							
+						</span>
+						<span class="thumb-info-caption">
+							<span class="thumb-info-caption-text">she is a software developer graduate from ida technology.
+								 and she has also skills in comunication in marketing experience acquired in different <br/>job and her toursism course in advanced level of secondary </span>
+							<span class="thumb-info-social-icons">
+								<a target="_blank" href="http://www.facebook.com"><i class="fab fa-facebook-f"></i><span>Facebook</span></a>
+								<a href="http://www.twitter.com"><i class="fab fa-twitter"></i><span>Twitter</span></a>
+								<a href="http://www.linkedin.com"><i class="fab fa-linkedin-in"></i><span>Linkedin</span></a>
+							</span>
+						</span>
+					</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+</div>
 
 
    <!-- footer -->
@@ -119,7 +386,7 @@
 				<div class="container pt-5">
 					<div class="row text-center">
 						<div class="col">
-							<a href="demo-church.html" class="text-decoration-none">
+							<a href="/" class="text-decoration-none">
 								<img src="{% static 'image/STAND LOGO.png' %}" width="90" height="41" alt class="{% static 'img-fluid custom-img-fluid-center" />
 							</a>
 						</div>
