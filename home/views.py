@@ -35,8 +35,12 @@ def welcome(request):
     return render(request,'indextwo.html') 
 def about(request):
     return render(request,'about.html')
+def blog(request):
+    return render(request,'blog.html')
+
 def Ikigega(request):
     return render(request,'ikigega.html')
+
     africastalking.initialize(username,api_key)
 
 @csrf_exempt
